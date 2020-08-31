@@ -2,16 +2,19 @@ import React from "react";
 import './header-top.scss'
 import HeaderLogo from "../header-logo";
 import Link from "../link";
+import HeaderTopNav from "../header-top-nav";
 
 const left = (
-    <div className='ht-left'>
+    <div className='ht-logo'>
         <HeaderLogo/>
         <span className='ht-address'>г.Екатеринбург, ул.8-Марта 207, стр. 6</span>
     </div>
 );
 
-const right = (
-    <div className='ht-right'>
+
+const htPhone = (
+    <div className='ht-phone'>
+
         <div className='ht-phones'>
             <h3 className='ht-phones-title'>Наши телефоны:</h3>
             <Link
@@ -23,10 +26,6 @@ const right = (
                 href={`tel:+79923421184`}
                 content={`+7 (992) 342-11-84`} />
         </div>
-
-        <nav className='ht-nav'>
-
-        </nav>
     </div>
 );
 
@@ -35,7 +34,8 @@ const HeaderTop = () => {
         <div className='header-top ht'>
             <div className='container ht-inner'>
                 {left}
-                {right}
+                <HeaderTopNav/>
+                {htPhone}
             </div>
         </div>
     )
