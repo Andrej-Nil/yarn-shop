@@ -1,5 +1,6 @@
 .header-top-nav{
   list-style-type: none;
+  height: 100%;
   padding: 0;
   display: flex;
   align-items: center;
@@ -7,6 +8,7 @@
 }
 
 .ht-nav-li{
+  position: relative;
   margin-right: 40px;
   &:last-child {
     margin-right: 0;
@@ -14,7 +16,7 @@
 }
 
 .ht-nav__link{
-  color: #505050;
+  color: #707070;
   &:hover{
     color: #000;
   }

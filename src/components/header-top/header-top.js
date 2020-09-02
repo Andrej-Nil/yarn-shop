@@ -3,20 +3,29 @@ import './header-top.scss'
 import HeaderLogo from "../header-logo";
 import Link from "../link";
 import HeaderTopNav from "../header-top-nav";
+import HeaderTopShops from "../header-top-shops";
 
 const left = (
-    <div className='ht-logo'>
+    <div className='ht-left'>
         <HeaderLogo/>
-        <span className='ht-address'>г.Екатеринбург, ул.8-Марта 207, стр. 6</span>
+        <div className="ht-shops-short-info">
+            <Link
+                cls='ht-shops-short-info__link'
+                href={`#!`}
+                content={`Наши адреса`}
+            />
+            <HeaderTopShops/>
+        </div>
     </div>
 );
 
 
 const htPhone = (
     <div className='ht-phone'>
-
+        <p className='ht-phones-title'>
+            Оптовый склад:
+        </p>
         <div className='ht-phones'>
-            <h3 className='ht-phones-title'>Наши телефоны:</h3>
             <Link
                 cls='phone-link'
                 href={`tel:+79920021184`}
@@ -26,6 +35,9 @@ const htPhone = (
                 href={`tel:+79923421184`}
                 content={`+7 (992) 342-11-84`} />
         </div>
+
+
+
     </div>
 );
 

@@ -4,9 +4,9 @@ import Link from "../link";
 
 const HeaderTopNav = () => {
     const li = [
-        {label: 'Оплата', cls: 'ht-nav-li', href: '#!'},
-        {label: 'Доставка', cls: 'ht-nav-li', href: '#!'},
-        {label: 'Магазины', cls: 'ht-nav-li _hover-li', href: '#!' }
+        {label: 'Оплата', cls: 'ht-nav-li', href: '#!',},
+        {label: 'Доставка', cls: 'ht-nav-li', href: '#!',},
+        {label: 'Поступление на склад', cls: 'ht-nav-li', href: '#!',},
     ];
 
     function renderLi() {
