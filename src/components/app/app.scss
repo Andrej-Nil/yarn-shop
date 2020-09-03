@@ -1,3 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;500&family=Roboto:wght@300;400&display=swap');
+//font-family: 'Marck Script', cursive;
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Roboto', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
 
 
+.container{
+  max-width: 1300px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn{
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+._redBtn{
+  background-color: #e35959;
+  transition: .1s ease-in;
+  &:hover{
+    background-color: #ff7575;
+  }
+}
+
+._blueBtn{
+  background-color: #3ea2e5;
+  transition: .1s ease-in;
+  &:hover{
+    background-color: #40baff;
+  }
+}
+
+.input{
+  border: 1px solid #c5c5c5;
+  padding: 7px;
+  border-radius: 5px;
+  outline: none;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.input::-webkit-input-placeholder {color:#aaa;}
+.input::-moz-placeholder          {color:#aaa;}
+.input:-moz-placeholder           {color:#aaa;}
+.input:-ms-input-placeholder      {color:#aaa;}
 
