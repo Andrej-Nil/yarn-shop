@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;500&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;500;600&family=Roboto:wght@300;400&display=swap');
 //font-family: 'Marck Script', cursive;
 //font-family: 'Montserrat', sans-serif;
 //font-family: 'Roboto', sans-serif;
@@ -49,6 +49,7 @@ a{
   border: none;
   font-size: 20px;
   color: #fff;
+  letter-spacing: 0.1em;
   cursor: pointer;
 }
 
@@ -70,7 +71,7 @@ a{
 
 .input{
   border: 1px solid #c5c5c5;
-  padding: 7px;
+  padding: 7px 15px;
   border-radius: 5px;
   outline: none;
 
@@ -80,8 +81,8 @@ a{
 
 }
 
-.input::-webkit-input-placeholder {color:#aaa;}
-.input::-moz-placeholder          {color:#aaa;}
-.input:-moz-placeholder           {color:#aaa;}
-.input:-ms-input-placeholder      {color:#aaa;}
+.input::-webkit-input-placeholder {color:#aaa; letter-spacing: 0.1em;}
+.input::-moz-placeholder          {color:#aaa; letter-spacing: 0.1em;}
+.input:-moz-placeholder           {color:#aaa; letter-spacing: 0.1em;}
+.input:-ms-input-placeholder      {color:#aaa; letter-spacing: 0.1em;}
 
