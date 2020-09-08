@@ -1,5 +1,17 @@
 .catalog {
-  display: inline-flex;
+  position: relative;
+  &:hover .catalog-list{
+    display: block;
+  }
+
+  &:hover .catalog-btn{
+    background-color: #d5d5d5;
+    border: 1px solid #d5d5d5;;
+  }
+}
+
+.catalog-btn{
+  display: flex;
   align-items: center;
   padding: 10px 40px;
   border: 1px solid #d5d5d5;
@@ -10,17 +22,13 @@
   font-size: 15px;
   letter-spacing: 0.1em;
   transition: 0.2s ease;
-  &:hover{
-    background-color: #d5d5d5;
-    border: 1px solid #d5d5d5;
-  }
 }
 
-.catalog-icon{
-  display: inline-block;
+.catalog__icon{
+  display: block;
   width: 16px;
   height: 16px;
-  margin-left: 40px;
+  margin-left: 30px;
   background-image: url('../../images/icon/menu-icon.svg');
   background-repeat: no-repeat;
   background-size: 100%;
