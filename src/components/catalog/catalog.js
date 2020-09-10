@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './catalog.scss';
-import CatalogList from "../gatalog-list";
+import CatalogList from "../catalog-list";
 import Link from "../link";
 
 export default  class Catalog extends Component{
