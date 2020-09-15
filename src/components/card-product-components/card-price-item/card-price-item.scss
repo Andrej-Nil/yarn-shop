@@ -1,0 +1,36 @@
+.card-price-wrap{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-price__title{
+  font-size: 21px;
+  margin-bottom: auto;
+}
+
+.card-price-item{
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.card-price{
+  margin-left: auto;
+  font-size: 15px;
+}
+._bold-price{
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff443c;
+}
+
+.card-price-item__type{
+  position: relative;
+  font-size: 14px;
+  padding-right: 23px;
+}
