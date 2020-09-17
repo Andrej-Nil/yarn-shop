@@ -56,8 +56,10 @@ a{
   padding: 8px 25px;
   border-radius: 5px;
   border: none;
-  font-size: 20px;
+
   color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
@@ -79,13 +81,15 @@ a{
 }
 
 .input{
+  width: 100%;
   border: 1px solid #c5c5c5;
   padding: 7px 15px;
   border-radius: 5px;
   outline: none;
 
+  color: #444;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
 
 }
