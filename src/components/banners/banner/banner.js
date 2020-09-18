@@ -1,6 +1,6 @@
 import React from "react";
 import './banner.scss'
-import Link from "../link";
+import Link from "../../link";
 
 const Banner = () => {
     const src = './image/banners/banner-1.jpg';
