@@ -18,12 +18,12 @@ const BannerGroupOne = () => {
     return (
         <div className='banner-group-one b-group-1 container'>
             <div className="b-group-1-inner">
-                <div className='b-group-1-left'>
+                <div className='b-group-1-img1'>
                     <BannerGroupImg img={img1}/>
                 </div>
                 <div className='b-group-1-right '>
 
-                    <div className='b-group-1-top'>
+                    <div className='b-group-1-img2'>
                         <BannerGroupImg img={img2}/>
                     </div>
                     <div className='b-group-1-bottom'>
@@ -32,12 +32,12 @@ const BannerGroupOne = () => {
                             <p className='b-group-1__desc'>
                                 Для каждого времяни года найдеться подходящая пряжа!
                             </p>
-                            <div className='b-group-1-b-l-img'>
+                            <div className='b-group-1-b-img3'>
                                 <BannerGroupImg img={img3}/>
                             </div>
 
                         </div>
-                        <div className='b-group-1-b-right'>
+                        <div className='b-group-1-img4'>
                             <BannerGroupImg img={img4}/>
                         </div>
                     </div>

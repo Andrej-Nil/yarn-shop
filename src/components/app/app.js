@@ -9,8 +9,14 @@ import Footer from "../footer-components/footer";
 import BannerGroupOne from "../banners/banner-group-one";
 import BannerGroupTwo from "../banners/banner-group-two";
 
+
+
 export default class App extends Component{
+
     render() {
+
+        const BannerSrc1 = './image/banners/banner-1.jpg';
+        const BannerSrc2 = './image/banners/banner-2.jpg';
         return (
 
             <div className='app'>
@@ -19,13 +25,15 @@ export default class App extends Component{
                 <MainCarousel/>
                 <Brands/>
                 <ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
-                <Banner/>
+                <Banner src={BannerSrc1}/>
                 <ProductRow title={'РАСПРОДАЖА'}/>
+                <Banner src={BannerSrc2}/>
                 <BannerGroupOne/>
                 <ProductRow title={'НОВИНКИ'}/>
                 <BannerGroupTwo/>
                 <Footer/>
             </div>
+
         )
     }
 }
