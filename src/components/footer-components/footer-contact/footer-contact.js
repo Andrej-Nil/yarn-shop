@@ -1,7 +1,7 @@
 import React from "react";
 import './footer-contact.scss'
 import FooterPhones from "../footer-phones";
-import FooterUl from "../footer-ul";
+import FooterContactUl from "../footer-contact-ul";
 import FooterContactItem from "../footer-contact-item";
 
 const address = [
@@ -27,11 +27,11 @@ const FooterContact = () => {
             </FooterContactItem>
 
             <FooterContactItem title={'Адрес оптового склада:'}>
-                <FooterUl arr={address}/>
+                <FooterContactUl arr={address}/>
             </FooterContactItem>
 
             <FooterContactItem title={'Время работы:'}>
-                <FooterUl arr={timeWork}/>
+                <FooterContactUl arr={timeWork}/>
             </FooterContactItem>
         </div>
     )

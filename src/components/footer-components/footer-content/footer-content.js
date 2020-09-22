@@ -1,15 +1,19 @@
 import React from "react";
 import './footer-content.scss'
+import FooterContact from "../footer-contact";
+import FooterNav from "../footer-nav";
+import FooterSocial from "../footer-social";
 
 
 
-const FooterContent = ({left, right}) => {
+const FooterContent = () => {
     return (
         <div className='footer-content'>
             <div className="footer-content-inner container">
-                {left}
+                <FooterNav/>
+                <FooterSocial/>
                 <div className='vertical-line'/>
-                {right}
+                {<FooterContact/>}
             </div>
         </div>
     )

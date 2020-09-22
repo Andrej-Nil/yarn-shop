@@ -1,7 +1,7 @@
 import React from "react";
-import './footer-ul.scss'
+import './footer-contact-ul.scss'
 
-const FooterUl = ({arr}) => {
+const FooterContactUl = ({arr}) => {
 
     function renderLi() {
         return arr.map(({title, label, id}) => {
@@ -26,4 +26,4 @@ const FooterUl = ({arr}) => {
     )
 };
 
-export default FooterUl;
+export default FooterContactUl;

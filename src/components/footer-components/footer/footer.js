@@ -2,16 +2,15 @@ import React, {Component}  from 'react';
 import './footer.scss'
 import FooterSubscription from "../footer-subscription";
 import FooterContent from "../footer-content";
-import FooterContact from "../footer-contact";
+import FooterCopyright from "../footer-copyright";
 
 export default class Footer extends Component{
     render() {
         return (
             <footer className='footer'>
                 <FooterSubscription/>
-                <FooterContent
-                    left={'test'}
-                    right={<FooterContact/>}/>
+                <FooterContent/>
+                <FooterCopyright/>
             </footer>
         )
     }
