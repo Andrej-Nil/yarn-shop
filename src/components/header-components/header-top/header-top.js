@@ -3,19 +3,13 @@ import './header-top.scss'
 import HeaderLogo from "../header-logo";
 import Link from "../../link";
 import HeaderTopNav from "../header-top-nav";
-import HeaderTopShops from "../header-top-shops";
+import HeaderAddresses from "../header-addresses";
 
 const left = (
     <div className='ht-left'>
         <HeaderLogo/>
-        <div className="ht-shops-short-info">
-            <Link
-                cls='ht-shops-short-info__link'
-                href={`#!`}
-                content={`Наши адреса`}
-            />
-            <HeaderTopShops/>
-        </div>
+        <HeaderAddresses/>
+
     </div>
 );
 

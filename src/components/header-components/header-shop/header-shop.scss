@@ -1,0 +1,31 @@
+.header-shop{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  width: 260px;
+  margin-right: 60px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.header-shop__title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.header-shop__desc{
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+  margin-bottom: 10px;
+}
+
+.header-shop__link{
+  color: #1783e0;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px dotted #1783e0;
+}

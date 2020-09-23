@@ -1,0 +1,34 @@
+.header-addresses{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding-left: 30px;
+  &::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../images/icon/location.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 center;
+  }
+
+  &:hover{
+    height: 100%;
+  }
+
+  &:hover .header-addresses-shops{
+    display: flex;
+  }
+}
+
+.header-addresses__link{
+  font-size: 17px;
+  border-bottom: 1px dotted #000;
+}

@@ -22,16 +22,16 @@ export default class App extends Component{
             <div className='app'>
 
                 <Header/>
-                <MainCarousel/>
-                <Brands/>
-                <ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
-                <Banner src={BannerSrc1}/>
-                <ProductRow title={'РАСПРОДАЖА'}/>
-                <Banner src={BannerSrc2}/>
-                <BannerGroupOne/>
-                <ProductRow title={'НОВИНКИ'}/>
-                <BannerGroupTwo/>
-                <Footer/>
+                {/*<MainCarousel/>*/}
+                {/*<Brands/>*/}
+                {/*<ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>*/}
+                {/*<Banner src={BannerSrc1}/>*/}
+                {/*<ProductRow title={'РАСПРОДАЖА'}/>*/}
+                {/*<Banner src={BannerSrc2}/>*/}
+                {/*<BannerGroupOne/>*/}
+                {/*<ProductRow title={'НОВИНКИ'}/>*/}
+                {/*<BannerGroupTwo/>*/}
+                {/*<Footer/>*/}
             </div>
 
         )
