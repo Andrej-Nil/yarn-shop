@@ -54,7 +54,7 @@ export default class Brands extends Component{
 
         const brands = this.renderBrands();
         return (
-            <div className='brands container'>
+            <div className='brands container mb70'>
                 {brands}
             </div>
         )

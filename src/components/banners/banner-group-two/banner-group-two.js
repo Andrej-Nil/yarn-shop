@@ -21,7 +21,7 @@ const BannerGroupTwo = () => {
     const img8 = {href: '#!', src: _baseSrc + 'r4.jpg', alt: 'img8', desc: 'Для изготовления поробуйте "Jeans".', id: 'img8'};
 
     return (
-       <div className='banner-group-two b-group-2 container'>
+       <div className='banner-group-two mb90 b-group-2 container'>
             <div className="b-group-2-inner">
                 <div className="b-group-2-left">
                     <div className="b-group-2-l-top">

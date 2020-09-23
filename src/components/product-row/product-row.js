@@ -9,6 +9,8 @@ export default class ProductRow extends Component{
                 src: '/image/leaders/puffy.png',
                 href: '#!',
                 title: 'Puffy',
+                brand: 'Alize',
+                hrefBrand: '#!',
                 price: 544,
                 id: 'puffy'
             },
@@ -17,6 +19,8 @@ export default class ProductRow extends Component{
                 src: '/image/leaders/jeans.png',
                 href: '#!',
                 title: 'Jeans',
+                brand: 'YarnArt',
+                hrefBrand: '#!',
                 price: 632.00,
                 id: 'jeans'
             },
@@ -25,6 +29,8 @@ export default class ProductRow extends Component{
                 src: '/image/leaders/children-novelty.png',
                 href: '#!',
                 title: 'Детская новинка',
+                brand: 'Пехорка',
+                hrefBrand: '#!',
                 price: 340.00,
                 id: 'children-novelty'
             },
@@ -33,6 +39,8 @@ export default class ProductRow extends Component{
                 src: '/image/leaders/masteritsa.png',
                 href: '#!',
                 title: 'Мастерица (нить для рукоделия)',
+                brand: 'ИП ЛИСТВИН',
+                hrefBrand: '#!',
                 price: 170,
                 id: 'masteritsa'
             },
@@ -40,6 +48,8 @@ export default class ProductRow extends Component{
             {
                 src: '/image/leaders/village.png',
                 href: '#!',
+                brand: 'Троицкая',
+                hrefBrand: '#!',
                 title: 'Деревенька',
                 price: 630,
                 id: 'village'
@@ -59,7 +69,7 @@ export default class ProductRow extends Component{
         const {title} = this.props;
         const cards = this.renderCard();
         return (
-            <section className='product-row container'>
+            <section className='product-row mb90 container'>
                 <h2 className='product-row__title'>{title}</h2>
                 <div className='product-row-item'>
                     {cards}

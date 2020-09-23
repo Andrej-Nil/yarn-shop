@@ -11,7 +11,8 @@ const FooterSocial = () => {
     function renderSocialIcon() {
         return socials.map( ({href, cls, id}) => {
             return (
-                <div key={id} className="footer-social-item">
+                <div key={id} 
+                     className="footer-social-item">
                     <a className='footer-social-link' href={href}>
                         <i className={`footer-social__icon ${cls}`}/>
                     </a>

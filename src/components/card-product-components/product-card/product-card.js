@@ -5,15 +5,23 @@ import CardDemo from "../card-demo";
 import CardPriceItem from "../card-price-item";
 const ProductCard = ({card}) => {
 
-    const {src, href, title, price } = card;
+    const {src, href, title, brand, hrefBrand, price } = card;
     const wholesalePrice = price.toFixed(2);
     const retailPrice = (price * 1.3).toFixed(2);
 
     return (
         <div className='product-card'>
 
-            <Link href={href}
-                  content={<CardDemo title={title} src={src}/>}/>
+            <CardDemo title={title} src={src} href={href}/>
+
+            <Link href={hrefBrand}
+                  cls='product-card__brand'
+                  content={brand} />
+
+            <h3 className='product-card-title'>
+                <Link href={href}
+                      content={title}/>
+            </h3>
 
             <div className='card-price-wrap'>
 

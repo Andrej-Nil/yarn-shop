@@ -16,7 +16,7 @@ const BannerGroupOne = () => {
 
 
     return (
-        <div className='banner-group-one b-group-1 container'>
+        <div className='banner-group-one mb90 b-group-1 container'>
             <div className="b-group-1-inner">
                 <div className='b-group-1-img1'>
                     <BannerGroupImg img={img1}/>

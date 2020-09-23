@@ -6,7 +6,7 @@ const Banner = ({src}) => {
 
     const banner = <img className='banner__img' src={src} alt=''/>;
     return (
-        <div className='banner container'>
+        <div className='banner mb90 container'>
            <Link href='#!' cls='' content={banner} />
         </div>
     )
