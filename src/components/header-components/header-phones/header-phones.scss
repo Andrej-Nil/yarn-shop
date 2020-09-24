@@ -1,0 +1,26 @@
+.header-phones{
+  display: none;
+  @media (min-width: 1024px){
+    display: flex;
+  }
+}
+
+.ht-phones-title{
+  display: none;
+  font-size: 15px;
+  margin-right: 10px;
+
+  @media (min-width: 1230px) {
+    display: block;
+  }
+}
+
+.phone-link{
+  display: block;
+  margin-bottom: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}

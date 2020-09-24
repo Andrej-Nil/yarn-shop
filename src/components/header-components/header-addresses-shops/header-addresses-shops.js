@@ -96,7 +96,6 @@ const shops = [
     },
 ];
 
-
 function renderShops() {
     return shops.map((shop) => {
         return (

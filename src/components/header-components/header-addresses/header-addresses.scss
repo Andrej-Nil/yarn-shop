@@ -1,9 +1,9 @@
 .header-addresses{
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: 25px;
-  padding-left: 30px;
+  padding-left: 25px;
   &::before{
     content: '';
     position: absolute;
@@ -11,8 +11,8 @@
     left: 0;
     transform: translate(0, -50%);
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-image: url('../../../images/icon/location.svg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -26,9 +26,24 @@
   &:hover .header-addresses-shops{
     display: flex;
   }
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+
+  @media (min-width: 1230px) {
+    padding-left: 30px;
+    &::before{
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
 
 .header-addresses__link{
-  font-size: 17px;
+  font-size: 14px;
   border-bottom: 1px dotted #000;
+  @media (min-width: 1230px) {
+    font-size: 17px;
+  }
 }
