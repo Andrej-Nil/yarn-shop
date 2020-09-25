@@ -2,7 +2,7 @@
   position: relative;
   display: none;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 15px;
   padding-left: 25px;
   &::before{
     content: '';
@@ -27,7 +27,7 @@
     display: flex;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: flex;
   }
 

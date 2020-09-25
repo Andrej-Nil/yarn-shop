@@ -9,7 +9,7 @@ export default class Header extends Component {
         return (
             <header className='header'>
                 <HeaderTop/>
-                {/*<HeaderCenter/>*/}
+                <HeaderCenter/>
                 {/*<HeaderBottom/>*/}
             </header>
 

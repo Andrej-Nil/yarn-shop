@@ -1,13 +1,44 @@
 .header-center{
-  padding: 20px 0;
+  padding: 15px 0;
+  @media(min-width: 768px) {
+    padding: 20px 0;
+  }
 }
+
 
 .hc-inner{
   display: flex;
+  align-items: center;
 }
 
-.hc-promo{
+.hc__promo{
+  display: none;
   margin-right: 20px;
   font-size: 15px;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.catalog__mobile{
+  background-color: #406fb4;
+}
+
+.header-search{
+  display:none;
+  flex-grow: 1;
+  margin-right: 40px;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.search-mobile-icon-wrap{
+  display: block;
+  margin-right: 20px;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 

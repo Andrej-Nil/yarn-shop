@@ -1,13 +1,12 @@
-.search{
+.form-input-btn{
   display: flex;
   flex-grow:1;
-  margin-right: 20px;
 }
 
-.search__input{
+._radius-left{
   border-radius: 5px 0 0 5px;
 }
 
-.search__submit{
+._radius-right{
   border-radius: 0 5px 5px 0;
 }

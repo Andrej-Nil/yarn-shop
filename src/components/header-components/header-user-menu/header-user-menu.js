@@ -1,41 +1,24 @@
 import React from "react";
 import './header-user-menu.scss'
-import Link from "../../link";
+import HeaderUserMenuItem from "../heder-user-menu-item";
 
-const MenuItem = ({icon, content}) => {
-    return (
-        <React.Fragment>
-            <i className={`h-user-menu__icon ${icon}`}/>
-            <span className='h-user-menu__content' >
-                {content}
-            </span>
-        </React.Fragment>
-    )
-};
+const menuItem = [
+    {href: '#!', icon: '_user-icon', label: 'Вход и регистрация', id: 'user'},
+    {href: '#!', icon: '_basket-icon', label: 'Корзина', id: 'basket'},
+];
 
+function menuItemRender() {
+    return menuItem.map( (item)=>{
+        return <HeaderUserMenuItem key={item.id} item={item}/>
+    })
+}
 
-const contentLogin = (
-    <React.Fragment>
-       Вход и <br/> регистрация
-    </React.Fragment>
-);
-
-const userLogin = <MenuItem icon={'_user-icon'} content={contentLogin}/>;
-
-const basket = <MenuItem icon={'_basket-icon'} content={'Корзина'}/>;
+const item = menuItemRender();
 
 const HeaderUserMenu = () => {
     return (
         <div className="header-user-menu h-user-menu">
-            <Link
-                href={"#!"}
-                content={userLogin}
-                cls={'h-user-menu-item'}/>
-
-            <Link
-                href={"#!"}
-                content={basket}
-                cls={'h-user-menu-item'}/>
+            {item}
         </div>
     )
 };

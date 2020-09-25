@@ -1,0 +1,44 @@
+.header-user-menu-item{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+
+  @media (min-width: 768px) {
+    margin-right: 30px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.h-user-menu__icon{
+  width: 25px;
+  height: 25px;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  @media (min-width: 768px) {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+._user-icon{
+  background-image: url('../../../images/icon/user.svg');
+}
+
+._basket-icon{
+  background-image: url('../../../images/icon/basket.svg');
+}
+
+.h-user-menu__label{
+  display: none;
+  font-size: 14px;
+  max-width: 90px;
+  @media (min-width: 920px) {
+    display: inline;
+  }
+}
