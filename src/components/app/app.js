@@ -22,7 +22,7 @@ export default class App extends Component{
             <div className='app'>
 
                 <Header/>
-                {/*<MainCarousel/>*/}
+                <MainCarousel/>
                 {/*<Brands/>*/}
                 {/*<ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>*/}
                 {/*<Banner src={BannerSrc1}/>*/}

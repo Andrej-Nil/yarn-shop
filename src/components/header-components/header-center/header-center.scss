@@ -1,5 +1,6 @@
 .header-center{
   padding: 15px 0;
+  background-color: #f9f9f9;
   @media(min-width: 768px) {
     padding: 20px 0;
   }
@@ -21,7 +22,12 @@
 }
 
 .catalog__mobile{
+  font-size: 12px;
+  font-weight: 300;
   background-color: #406fb4;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header-search{

@@ -1,5 +1,10 @@
 .header-bottom{
-  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .hb-inner{

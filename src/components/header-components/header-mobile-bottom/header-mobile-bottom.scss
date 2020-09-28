@@ -1,0 +1,79 @@
+.header-mobile-bottom{
+  width: 100%;
+  @media(min-width: 768px){
+    display: none;
+  }
+}
+
+.header-mobile-short-menu{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.short-menu-item{
+  width: 50%;
+  text-align: center;
+  border-top: 1px solid #d5d5d5;
+
+  &:last-child{
+    width: 100%;
+  }
+}
+
+.short-menu-link{
+  display: inline-block;
+  width: 100%;
+}
+
+.short-menu-content{
+  position: relative;
+  display: inline-block;
+  padding: 15px 0 10px 35px;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: block;
+    height: 25px;
+    width: 25px;
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+}
+
+._m-yarn {
+  &::before {
+    background-image: url('../../../images/icon/yarn-m-icon.png');
+  }
+}
+
+._m-spoke {
+  &::before {
+    background-image: url('../../../images/icon/spoke-m-icon.png');
+  }
+}
+
+._m-hook {
+  &::before {
+    background-image: url('../../../images/icon/hook-m-icon.png');
+  }
+}
+
+._m-furniture {
+  &::before {
+    background-image: url('../../../images/icon/furniture-m-icon.png');
+  }
+}
+
+._m-sale {
+  &::before {
+    background-image: url('../../../images/icon/sale-m-icon.png');
+  }
+}
