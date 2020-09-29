@@ -8,6 +8,7 @@ import Banner from "../banners/banner";
 import Footer from "../footer-components/footer";
 import BannerGroupOne from "../banners/banner-group-one";
 import BannerGroupTwo from "../banners/banner-group-two";
+import MainCarouselMobile from "../main-carousel-mobile";
 
 
 
@@ -23,7 +24,8 @@ export default class App extends Component{
 
                 <Header/>
                 <MainCarousel/>
-                {/*<Brands/>*/}
+                <MainCarouselMobile/>
+                <Brands/>
                 {/*<ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>*/}
                 {/*<Banner src={BannerSrc1}/>*/}
                 {/*<ProductRow title={'РАСПРОДАЖА'}/>*/}

@@ -2,6 +2,15 @@
   position: relative;
   padding: 0;
   margin-bottom: 50px;
+  display: none;
+  @media(min-width: 768px){
+    display: block;
+  }
+
+}
+
+.main-carousel .owl-dots{
+  display: none;
 }
 
 .main-carousel-nav{
@@ -18,34 +27,46 @@
 .main-carousel-nav__arrow{
   display: flex;
   justify-content: space-between;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   z-index: 100;
   transition: 0.2s ease;
   background-repeat: no-repeat;
-  background-size: 30px;
+  background-size: 22px;
   &:hover{
     background-color: rgba(255, 255, 255, 1);
+  }
+  @media(min-width: 1024px){
+    width: 50px;
+    height: 50px;
+    background-size: 25px;
+
   }
 
 }
 
 ._slider-prev{
-  margin-left: 60px;
+  margin-left: 50px;
   background-position: 40% 50%;
   background-image: url('../../images/interface/main-carousel-prev-l.svg');
   &:hover {
     background-image: url('../../images/interface/main-carousel-prev-d.svg')
   }
+  @media(min-width: 1024px){
+    margin-right: 50px;
+  }
 }
 
 ._slider-next{
-  margin-right: 60px;
+  margin-right: 30px;
   background-position: 60% 50%;
   background-image: url('../../images/interface/main-carousel-next-l.svg');
   &:hover {
     background-image: url('../../images/interface/main-carousel-next-d.svg');
+  }
+  @media(min-width: 1024px){
+    margin-right: 50px;
   }
 }

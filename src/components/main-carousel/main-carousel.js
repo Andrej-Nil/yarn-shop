@@ -8,7 +8,6 @@ export default class MainCarousel extends Component{
     constructor(props) {
         super(props);
         this.mainCarousel = createRef();
-
     }
     state={
         slides: [
