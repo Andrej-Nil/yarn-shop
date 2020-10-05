@@ -1,14 +1,26 @@
-import React, {Component, createRef} from 'react';
+import React, {Component} from 'react';
 import './main-carousel.scss';
 import Link from "../link";
-import OwlCarousel from "react-owl-carousel2";
-import "react-owl-carousel2/lib/styles.css";
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function SampleNextArrow(props) {
+    const {onClick } = props;
+    return (
+        <span onClick={onClick} className={`main-carousel-nav__arrow _slider-next`}/>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const {onClick} = props;
+    return (
+            <span onClick={onClick} className={`main-carousel-nav__arrow _slider-prev`}/>
+    );
+}
+
 
 export default class MainCarousel extends Component{
-    constructor(props) {
-        super(props);
-        this.mainCarousel = createRef();
-    }
     state={
         slides: [
             {
@@ -24,18 +36,8 @@ export default class MainCarousel extends Component{
         ]
     };
 
-
-
     render() {
         const {slides} = this.state;
-
-        const mainCarouselOptions = {
-            items: 1,
-            rewind: true,
-            autoplay: true,
-            loop: true,
-            autoplayTimeout: 10000,
-        };
 
         function renderSlides(){
             return slides.map(({src, href,  id}) => {
@@ -50,24 +52,25 @@ export default class MainCarousel extends Component{
             })
         }
 
+        const settings = {
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            speed: 500,
+            pauseOnHover: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
+        };
+
 
         const slidesItem = renderSlides();
         return (
             <div className='main-carousel container'>
-                <OwlCarousel ref={this.mainCarousel} options={mainCarouselOptions}>
+                <Slider {...settings}>
                     {slidesItem}
-                </OwlCarousel>
-                <div className='main-carousel-nav'>
-                    <span
-                        onClick={() => this.mainCarousel.current.prev()}
-                        className="main-carousel-nav__arrow _slider-prev"/>
-
-                    <span
-                        onClick={() => this.mainCarousel.current.next()}
-                        className="main-carousel-nav__arrow _slider-next"/>
-                </div>
-
-
+                </Slider>
 
             </div>
         )

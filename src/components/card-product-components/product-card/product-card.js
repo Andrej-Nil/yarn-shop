@@ -10,28 +10,30 @@ const ProductCard = ({card}) => {
     const retailPrice = (price * 1.3).toFixed(2);
 
     return (
-        <div className='product-card'>
+        <div className="product-card-wrap">
+            <div className='product-card'>
 
-            <CardDemo title={title} src={src} href={href}/>
+                <CardDemo title={title} src={src} href={href}/>
 
-            <Link href={hrefBrand}
-                  cls='product-card__brand'
-                  content={brand} />
+                <Link href={hrefBrand}
+                      cls='product-card__brand'
+                      content={brand} />
 
-            <h3 className='product-card-title'>
-                <Link href={href}
-                      content={title}/>
-            </h3>
+                <h3 className='product-card-title'>
+                    <Link href={href}
+                          content={title}/>
+                </h3>
 
-            <div className='card-price-wrap'>
+                <div className='card-price-wrap'>
 
-                <CardPriceItem
-                    type={'Оптовая:'} isWholesale={true}
-                    cls={'_bold-price'} price={wholesalePrice}/>
+                    <CardPriceItem
+                        type={'Оптовая:'} isWholesale={true}
+                        cls={'_bold-price'} price={wholesalePrice}/>
 
-                <CardPriceItem
-                    type={'Розничная:'}  price={retailPrice}/>
+                    <CardPriceItem
+                        type={'Розничная:'}  price={retailPrice}/>
 
+                </div>
             </div>
         </div>
     )

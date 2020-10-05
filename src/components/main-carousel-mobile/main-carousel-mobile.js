@@ -1,13 +1,11 @@
 import React, {Component, createRef} from 'react';
 import './main-carousel-mobile.scss'
 import Link from "../link";
-import OwlCarousel from "react-owl-carousel2";
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default class MainCarouselMobile extends Component{
-    constructor(props) {
-        super(props);
-        this.mainCarouselM = createRef();
-    }
     state={
         slides: [
             {
@@ -25,13 +23,20 @@ export default class MainCarouselMobile extends Component{
     render() {
         const {slides} = this.state;
 
-        const mainCarouselMOptions = {
-            items: 1,
-            rewind: true,
-            autoplay: true,
-            loop: true,
+        const settings = {
             dots: true,
-            autoplayTimeout: 10000,
+            dotsClass: 'main-carousel-m-dots',
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            speed: 500,
+            pauseOnHover: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            customPaging: i => (
+                <div className='main-carousel-m-dots__item'/>
+            )
         };
 
         function renderSlides(){
@@ -46,14 +51,12 @@ export default class MainCarouselMobile extends Component{
                 )
             })
         }
-
-
         const slidesItem = renderSlides();
         return (
             <div className='main-carousel-mobile'>
-                <OwlCarousel ref={this.mainCarouselM} options={mainCarouselMOptions}>
+                <Slider {...settings}>
                     {slidesItem}
-                </OwlCarousel>
+                </Slider>
             </div>
         )
     }

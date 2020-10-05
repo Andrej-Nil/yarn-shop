@@ -101,10 +101,12 @@ a{
 .input:-moz-placeholder           {color:#aaa; letter-spacing: 0.1em;}
 .input:-ms-input-placeholder      {color:#aaa; letter-spacing: 0.1em;}
 
-.mb70{
-  margin-bottom: 70px;
-}
-
-.mb90{
-  margin-bottom: 90px;
+.mb{
+  margin-bottom: 50px;
+  @media (min-width: 786px) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 90px;
+  }
 }

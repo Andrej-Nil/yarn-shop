@@ -26,12 +26,12 @@ export default class App extends Component{
                 <MainCarousel/>
                 <MainCarouselMobile/>
                 <Brands/>
-                {/*<ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>*/}
+                <ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
                 {/*<Banner src={BannerSrc1}/>*/}
-                {/*<ProductRow title={'РАСПРОДАЖА'}/>*/}
+                <ProductRow title={'РАСПРОДАЖА'}/>
                 {/*<Banner src={BannerSrc2}/>*/}
                 {/*<BannerGroupOne/>*/}
-                {/*<ProductRow title={'НОВИНКИ'}/>*/}
+                <ProductRow title={'НОВИНКИ'}/>
                 {/*<BannerGroupTwo/>*/}
                 {/*<Footer/>*/}
             </div>

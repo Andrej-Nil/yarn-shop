@@ -1,6 +1,10 @@
-import React, {Component}  from 'react';
+import React, {Component} from 'react';
 import './product-row.scss'
 import ProductCard from "../card-product-components/product-card";
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Link from "../link";
 
 export default class ProductRow extends Component{
     state={
@@ -59,6 +63,9 @@ export default class ProductRow extends Component{
 
 
 
+
+
+
     renderCard() {
         const { leaders } = this.state;
         return leaders.map( (card) => {
@@ -68,11 +75,65 @@ export default class ProductRow extends Component{
     render() {
         const {title} = this.props;
         const cards = this.renderCard();
+        const test = [
+            {
+                breakpoint: 1280,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 1080,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 816,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 556,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                }
+            },
+        ];
+        const settings = {
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: test,
+
+        };
         return (
-            <section className='product-row mb90 container'>
-                <h2 className='product-row__title'>{title}</h2>
+            <section className='product-row mb'>
+                <div className='bg__title'>
+                <h2 className='product-row__title container'>
+                    <a className='product-row__link' href='#!'>{title}</a>
+                </h2>
+                </div>
+
+
                 <div className='product-row-item'>
-                    {cards}
+                    <Slider {...settings}>
+                        {cards}
+                    </Slider>
                 </div>
 
             </section>

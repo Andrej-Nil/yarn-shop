@@ -3,26 +3,35 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
+  margin-bottom: 30px;
 
   @media (min-width: 768px) {
     flex-wrap: nowrap;
+    padding: 0 10px
+  }
+
+  @media (min-width: 1024px) {
+    flex-wrap: nowrap;
+    padding: 0 15px;
+    margin-bottom: 60px;
   }
 }
 
 .brands-link{
   position: relative;
   display: inline-flex;
-  width: 25%;
-  padding: 20px 10px;
+  width: 21%;
+  height: 100px;
   align-items: center;
 
+
   @media (min-width: 768px) {
-    width: auto;
-    margin-bottom: 0;
+    width: 10%;
   }
   @media (min-width: 1024px) {
-    height: 100px;
-    padding: 0 15px;
+    width: 10%;
+
     &::before{
       content: '';
       position: absolute;
@@ -51,7 +60,7 @@
 
   @media (min-width: 1230px) {
     height: 130px;
-    padding: 0 25px;
+    width: 9%;
   }
 }
 
