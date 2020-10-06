@@ -9,9 +9,9 @@ const HeaderBottom = () => {
             <div className='hb-inner container'>
                 <Catalog/>
                 <HeaderNav/>
-                <HeaderMobileBottom/>
-            </div>
 
+            </div>
+            <HeaderMobileBottom/>
         </div>
     )
 };

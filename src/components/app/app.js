@@ -15,9 +15,20 @@ import MainCarouselMobile from "../main-carousel-mobile";
 export default class App extends Component{
 
     render() {
+        const _bannerBaseApi = './image/banners/banner';
+        const banner1 = [
+            {src: `${_bannerBaseApi}-1.jpg`, cls: '_desktop', id: 'desktop' },
+            {src: `${_bannerBaseApi}-1-middle.jpg`, cls: '_middle', id: 'middle' },
+            {src: `${_bannerBaseApi}-1-small.jpg`, cls: '_small', id: 'small' },
+            {src: `${_bannerBaseApi}-1-tiny.jpg`, cls: '_tiny', id: 'tiny' },
+        ];
 
-        const BannerSrc1 = './image/banners/banner-1.jpg';
-        const BannerSrc2 = './image/banners/banner-2.jpg';
+        const banner2 = [
+            {src: `${_bannerBaseApi}-2.jpg`, cls: '_desktop', id: 'desktop' },
+            {src: `${_bannerBaseApi}-2-middle.jpg`, cls: '_middle', id: 'middle' },
+            {src: `${_bannerBaseApi}-2-small.jpg`, cls: '_small', id: 'small' },
+            {src: `${_bannerBaseApi}-2-tiny.jpg`, cls: '_tiny', id: 'tiny' },
+        ];
         return (
 
             <div className='app'>
@@ -27,13 +38,13 @@ export default class App extends Component{
                 <MainCarouselMobile/>
                 <Brands/>
                 <ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
-                {/*<Banner src={BannerSrc1}/>*/}
+                <Banner banner={banner1}/>
                 <ProductRow title={'РАСПРОДАЖА'}/>
-                {/*<Banner src={BannerSrc2}/>*/}
+                <Banner banner={banner2}/>
                 {/*<BannerGroupOne/>*/}
                 <ProductRow title={'НОВИНКИ'}/>
                 {/*<BannerGroupTwo/>*/}
-                {/*<Footer/>*/}
+                <Footer/>
             </div>
 
         )

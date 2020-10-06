@@ -17,8 +17,12 @@
 }
 
 .product-row-item{
-  max-width: 1335px;
+  max-width: 1310px;
+  padding: 0 10px;
   margin: 0 auto;
+  @media (min-width: 1280px) {
+    padding: 0 5px;
+  }
 
 }
 

@@ -1,4 +1,4 @@
-import React, {Component, createRef} from 'react';
+import React, {Component} from 'react';
 import './main-carousel-mobile.scss'
 import Link from "../link";
 import Slider from 'react-slick'
@@ -34,7 +34,7 @@ export default class MainCarouselMobile extends Component{
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            customPaging: i => (
+            customPaging: () => (
                 <div className='main-carousel-m-dots__item'/>
             )
         };

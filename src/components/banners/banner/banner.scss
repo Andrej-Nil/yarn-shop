@@ -1,6 +1,44 @@
 .banner{
+  padding: 0 0;
+  @media (min-width: 1280px) {
+    padding: 0 15px;
+  }
 }
 
 .banner__img{
   width: 100%;
+}
+
+._desktop{
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+._middle{
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+._small{
+   display: none;
+   @media (min-width: 576px) {
+     display: block;
+   }
+   @media (min-width: 768px) {
+     display: none;
+   }
+ }
+
+._tiny{
+  display: block;
+  @media (min-width: 576px) {
+    display: none;
+  }
 }
