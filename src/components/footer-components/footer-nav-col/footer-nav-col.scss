@@ -1,5 +1,27 @@
 .footer-nav-col{
-  margin-right: 50px;
+  margin-right: 0;
+  &:last-child{
+    margin-right: 0;
+  }
+  &:nth-last-child(-n+2){
+    display: none;
+  }
+
+  @media (min-width: 950px) {
+    &:first-child{
+      margin-right: 50px;
+    }
+    &:nth-last-child(2){
+      display: block;
+    }
+  }
+
+  @media (min-width: 1150px) {
+      margin-right: 50px;
+    &:nth-last-child(1){
+      display: block;
+    }
+  }
 }
 
 .footer-nav-ul{

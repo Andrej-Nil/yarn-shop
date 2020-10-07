@@ -12,7 +12,6 @@ const FooterContent = () => {
             <div className="footer-content-inner container">
                 <FooterNav/>
                 <FooterSocial/>
-                <div className='vertical-line'/>
                 {<FooterContact/>}
             </div>
         </div>

@@ -5,16 +5,36 @@
 
 .footer-subscription-inner{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  max-width: 540px;
+  margin: 0;
+
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    align-items: center;
+    max-width: 1310px;
+    margin: 0 auto;
+  }
 }
 
 .f-subscript-form__desc{
-  font-weight: 600;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 20px;
+  @media (min-width: 540px) {
+
+  }
+  @media (min-width: 1080px) {
+    width: 50%;
+    margin-bottom: 0;
+  }
 }
 
 .f-subscript-form{
-  max-width: 600px;
   width: 100%;
+  @media (min-width: 1080px) {
+    width: 50%;
+  }
 }
 

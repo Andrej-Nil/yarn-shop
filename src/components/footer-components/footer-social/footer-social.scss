@@ -1,5 +1,10 @@
 .footer-social{
-
+  width: 230px;
+  margin-bottom: 20px;
+  @media (min-width: 540px) {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 .footer-social__title{
   font-size: 16px;

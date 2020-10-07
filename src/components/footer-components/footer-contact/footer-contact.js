@@ -20,6 +20,7 @@ const timeWork = [
 const FooterContact = () => {
     return (
         <div className='footer-contact f-contact'>
+            <div className='vertical-line'/>
             <h3 className='f-contact__title'>Контактная информация</h3>
 
             <FooterContactItem title={'Телефоны:'}>

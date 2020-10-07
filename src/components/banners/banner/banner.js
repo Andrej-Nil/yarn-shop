@@ -12,6 +12,7 @@ const Banner = ({banner}) => {
         })
     }
 
+
     const banners = renderBanner();
     return (
         <div className='banner mb container'>
