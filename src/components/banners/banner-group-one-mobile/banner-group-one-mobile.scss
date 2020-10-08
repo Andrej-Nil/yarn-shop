@@ -1,0 +1,29 @@
+.banner-group-one-mobile{
+  margin-bottom: 30px;
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.group-one-mobile__title{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.group-one-mobile__images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.img-wrap{
+  width: 49.5%;
+  margin-bottom: 20px;
+}

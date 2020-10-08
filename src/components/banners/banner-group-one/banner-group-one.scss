@@ -1,4 +1,9 @@
 .banner-group-one{
+  display: none;
+  //padding: 0 10px;
+  @media  (min-width: 768px) {
+    display: block;
+  }
 }
 
 .b-group-1-inner{
@@ -11,7 +16,7 @@
 
 .b-group-1-img1{
   display: flex;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .b-group-1-right{
@@ -22,7 +27,7 @@
 
 .b-group-1-img2{
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 
@@ -35,7 +40,7 @@
 
 .b-group-1-b-left{
   display: flex;
-  margin-right: 15px;
+  margin-right: 10px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
@@ -46,8 +51,11 @@
   height: 100%;
   align-items: center;
   max-width: 415px;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 .b-group-1-b-img3{

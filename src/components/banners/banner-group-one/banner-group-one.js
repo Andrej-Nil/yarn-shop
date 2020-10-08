@@ -5,18 +5,18 @@ import BannerGroupImg from "../banner-group-img";
 const BannerGroupOne = () => {
     const _baseSrc = 'image/banners/b-group-1/b-group-1-';
     const img1 = {href: '#!', src: _baseSrc + '1.jpg', alt: 'лето',
-        desc: 'Подборка пряжи к летнему сезону.', id: 'summer'};
+        desc: 'Летная подборка.', id: 'summer'};
     const img2 = {href: '#!', src: _baseSrc + '2.jpg', alt: 'осень',
-        desc: 'Подборка пряжи к осеннему сезону.', id: 'fall'};
+        desc: 'Осенняя подборка.', id: 'fall'};
     const img3 = {href: '#!', src: _baseSrc + '3.jpg', alt: 'весна',
-        desc: 'Подборка пряжи к весеннему сезону.', id:'spring'};
+        desc: 'Весенняя подборка.', id:'spring'};
     const img4 = {href: '#!', src: _baseSrc + '4.jpg', alt: 'зима',
-        desc: 'Подборка пряжи к зимнему сезону.', id:'winter'};
+        desc: 'Зимняя подборка.', id:'winter'};
 
 
 
     return (
-        <div className='banner-group-one mb90 b-group-1 container'>
+        <div className='banner-group-one mb b-group-1 container'>
             <div className="b-group-1-inner">
                 <div className='b-group-1-img1'>
                     <BannerGroupImg img={img1}/>
