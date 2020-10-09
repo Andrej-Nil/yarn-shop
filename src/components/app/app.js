@@ -10,6 +10,7 @@ import BannerGroupOne from "../banners/banner-group-one";
 import BannerGroupTwo from "../banners/banner-group-two";
 import MainCarouselMobile from "../main-carousel-mobile";
 import BannerGroupOneMobile from "../banners/banner-group-one-mobile";
+import BannerGroupTwoMobile from "../banners/banner-group-two-mobile";
 
 
 
@@ -46,6 +47,7 @@ export default class App extends Component{
                 <BannerGroupOneMobile/>
                 <ProductRow title={'НОВИНКИ'}/>
                 <BannerGroupTwo/>
+                <BannerGroupTwoMobile/>
                 <Footer/>
             </div>
 

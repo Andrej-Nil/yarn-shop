@@ -111,3 +111,13 @@ a{
     margin-bottom: 90px;
   }
 }
+
+.group-mobile__title{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}

@@ -6,7 +6,7 @@
   }
 }
 
-.group-one-mobile__title{
+.group-mobile__title{
   padding: 10px 20px;
   font-size: 16px;
   background-color: #e5e5e5;
@@ -20,10 +20,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+  @media (min-width: 650px) {
+    flex-wrap: nowrap;
+  }
+
 }
 
-.img-wrap{
+.group-one-img-wrap{
   width: 49.5%;
   margin-bottom: 20px;
+
+  @media (min-width: 650px) {
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: 0;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
 }

@@ -13,7 +13,7 @@ const images = [
 function renderImg() {
     return images.map( (img) => {
         return (
-            <div key={img.id} className='img-wrap'>
+            <div key={img.id} className='group-one-img-wrap'>
                 <BannerGroupImg  img={img}/>
             </div>
         )
@@ -24,7 +24,7 @@ const BannerGroupOneMobile = () => {
     return (
 
         <div className='banner-group-one-mobile'>
-            <h3 className="group-one-mobile__title">Для каждого времяни года найдеться подходящая пряжа!</h3>
+            <h3 className="group-mobile__title">Для каждого времяни года найдеться подходящая пряжа!</h3>
             <div className="group-one-mobile__images">
                 {img}
             </div>

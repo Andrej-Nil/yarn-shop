@@ -1,0 +1,8 @@
+._img-wrap-100{
+
+  display: block;
+  width: 100%;
+  @media (min-width: 650px ) {
+    display: none;
+  }
+}
