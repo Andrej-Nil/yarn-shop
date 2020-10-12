@@ -4,6 +4,7 @@
   align-items: center;
   margin-left: 15px;
   padding-left: 25px;
+  z-index: 100;
   &::before{
     content: '';
     position: absolute;

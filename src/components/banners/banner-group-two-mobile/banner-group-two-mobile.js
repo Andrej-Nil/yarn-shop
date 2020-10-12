@@ -27,6 +27,7 @@ const BannerGroupTwoMobile = () => {
     return (
         <div className="banner-group-one-mobile">
             <div className='banner-group-one-mobile'>
+
                 <h3 className="group-mobile__title">Мир, где каждую идею можно воплотить руками!</h3>
                 <div className="group-one-mobile__images">
                     {img}

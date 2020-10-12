@@ -11,12 +11,23 @@ import BannerGroupTwo from "../banners/banner-group-two";
 import MainCarouselMobile from "../main-carousel-mobile";
 import BannerGroupOneMobile from "../banners/banner-group-one-mobile";
 import BannerGroupTwoMobile from "../banners/banner-group-two-mobile";
+import SearchMobile from "../search-mobile";
 
 
 
 export default class App extends Component{
 
+    state = {
+       isSearchOpen: false
+    };
+
+    searchChange = () => {
+        this.setState({
+            isSearchOpen: !this.state.isSearchOpen
+        })
+    };
     render() {
+        const {isSearchOpen} = this.state;
         const _bannerBaseApi = './image/banners/banner';
         const banner1 = [
             {src: `${_bannerBaseApi}-1.jpg`, cls: '_desktop', id: 'desktop' },
@@ -35,7 +46,7 @@ export default class App extends Component{
 
             <div className='app'>
 
-                <Header/>
+                <Header searchChange={this.searchChange}/>
                 <MainCarousel/>
                 <MainCarouselMobile/>
                 <Brands/>
@@ -49,6 +60,9 @@ export default class App extends Component{
                 <BannerGroupTwo/>
                 <BannerGroupTwoMobile/>
                 <Footer/>
+                <SearchMobile
+                    searchChange={this.searchChange}
+                    isOpen={isSearchOpen}/>
             </div>
 
         )

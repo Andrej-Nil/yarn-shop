@@ -41,7 +41,9 @@ a{
   color: #000;
 }
 
-
+.app{
+  position: relative;
+}
 
 .container{
   max-width: 1310px;
@@ -55,15 +57,18 @@ a{
 
 .btn{
   display: inline-block;
-  padding: 8px 25px;
+  padding: 6px 12px;
   border-radius: 5px;
   border: none;
 
   color: #fff;
-  font-size: 15px;
-  line-height: 1.2;
+  font-size: 12px;
   letter-spacing: 0.1em;
   cursor: pointer;
+  @media (min-width: 768px) {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
 
 }
 
@@ -86,15 +91,18 @@ a{
 .input{
   width: 100%;
   border: 1px solid #999;
-  padding: 7px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
   outline: none;
 
   color: #444;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
-
+  @media (min-width: 768px) {
+    padding: 7px 15px;
+    font-size: 15px;
+  }
 }
 
 .input::-webkit-input-placeholder {color:#aaa; letter-spacing: 0.1em;}

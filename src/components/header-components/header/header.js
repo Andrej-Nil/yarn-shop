@@ -6,10 +6,11 @@ import HeaderBottom from "../header-bottom";
 
 export default class Header extends Component {
     render() {
+        const {searchChange} = this.props;
         return (
             <header className='header'>
                 <HeaderTop/>
-                <HeaderCenter/>
+                <HeaderCenter searchChange={searchChange}/>
                 <HeaderBottom/>
             </header>
 

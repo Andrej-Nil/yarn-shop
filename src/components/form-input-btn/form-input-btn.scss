@@ -1,26 +1,15 @@
 .form-input-btn{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  height: 72px;
   flex-grow:1;
-  @media (min-width: 540px) {
-    flex-direction: row;
-    height: auto;
-  }
+  align-items: center;
 }
 
 ._radius-left{
-
-  @media (min-width: 540px) {
     border-radius: 5px 0 0 5px;
-  }
 }
 
 ._radius-right{
-  @media (min-width: 540px) {
     border-radius:  0 5px 5px 0;
-
-
-  }
 }

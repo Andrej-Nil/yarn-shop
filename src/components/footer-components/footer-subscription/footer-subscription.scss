@@ -7,34 +7,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 540px;
   margin: 0;
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1000px) {
     flex-direction: row;
     align-items: center;
-    max-width: 1310px;
     margin: 0 auto;
   }
 }
 
 .f-subscript-form__desc{
   font-weight: 400;
-  width: 100%;
-  margin-bottom: 20px;
+  max-width: 490px;
+  margin-bottom: 10px;
+  font-size: 12px;
   @media (min-width: 540px) {
-
+    margin-bottom: 15px;
+    font-size: 15px;
   }
-  @media (min-width: 1080px) {
+  @media (min-width: 1000px) {
     width: 50%;
     margin-bottom: 0;
   }
 }
 
 .f-subscript-form{
-  width: 100%;
-  @media (min-width: 1080px) {
-    width: 50%;
+    max-width: 500px;
+  @media (min-width: 1000px) {
+    max-width: 50%;
+    width: 100%;
   }
 }
 
