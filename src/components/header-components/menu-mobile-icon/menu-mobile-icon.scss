@@ -1,11 +1,11 @@
 .menu-mobile-icon{
   width: 30px;
   height: 30px;
-  //display: block;
   background-image: url('../../../images/interface/menu-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  cursor: pointer;
   @media (min-width: 768px) {
     display: none;
   }

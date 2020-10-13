@@ -1,0 +1,65 @@
+.mobile-nav-ul{
+}
+
+.mobile-nav-li{
+  position: relative;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.mobile-nav__label{
+  display: block;
+  color: #444;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+._submenu-arrow{
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-image: url('../../images/interface/grey-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+}
+
+.item-icon{
+  font-weight: 800;
+  padding-left: 60px;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+}
+
+
+
+
+._point {
+  &::before {
+    background-image: url('../../images/icon/location.svg');
+  }
+}
+
+._catalog {
+  &::before {
+    background-image: url('../../images/icon/mobile-canalog-icon.svg');
+  }
+}

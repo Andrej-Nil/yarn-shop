@@ -1,10 +1,10 @@
 import React from "react";
 import './search-mobile-icon.scss'
 
-const SearchMobileIcon = ({searchChange}) => {
+const SearchMobileIcon = ({isOpenSearch}) => {
     return (
         <i
-            onClick={searchChange}
+            onClick={isOpenSearch}
             className='search-mobile-icon '/>
     )
 };

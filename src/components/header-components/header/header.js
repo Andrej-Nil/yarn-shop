@@ -6,11 +6,11 @@ import HeaderBottom from "../header-bottom";
 
 export default class Header extends Component {
     render() {
-        const {searchChange} = this.props;
+        const {isOpenSearch, isOpenNav} = this.props;
         return (
             <header className='header'>
-                <HeaderTop/>
-                <HeaderCenter searchChange={searchChange}/>
+                <HeaderTop isOpenNav={isOpenNav}/>
+                <HeaderCenter isOpenSearch={isOpenSearch}/>
                 <HeaderBottom/>
             </header>
 

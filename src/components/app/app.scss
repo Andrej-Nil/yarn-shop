@@ -43,9 +43,11 @@ a{
 
 .app{
   position: relative;
+  //overflow: hidden;
 }
 
 .container{
+  position: relative;
   max-width: 1310px;
   padding: 0 20px;
   width: 100%;
@@ -128,4 +130,8 @@ a{
   @media (min-width: 768px) {
     font-size: 18px;
   }
+}
+
+.no-scroll{
+  overflow: hidden;
 }

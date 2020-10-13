@@ -1,9 +1,11 @@
 import React from "react";
 import './menu-mobile-icon.scss'
 
-const MenuMobileIcon = () => {
+const MenuMobileIcon = ({isOpenNav}) => {
     return (
-        <i className='menu-mobile-icon'/>
+        <i
+            onClick={isOpenNav}
+            className='menu-mobile-icon'/>
 
     )
 };

@@ -5,7 +5,7 @@ import FormInputBtn from "../../form-input-btn";
 import HeaderUserMenu from "../header-user-menu";
 import SearchMobileIcon from "../search-mobile-icon";
 
-const HeaderCenter = ({searchChange}) => {
+const HeaderCenter = ({isOpenSearch}) => {
     return (
         <div className="header-center hc">
             <div className='container hc-inner'>
@@ -27,7 +27,7 @@ const HeaderCenter = ({searchChange}) => {
                 </div>
 
                 <div className='search-mobile-icon-wrap'>
-                    <SearchMobileIcon searchChange={searchChange}/>
+                    <SearchMobileIcon isOpenSearch={isOpenSearch}/>
                 </div>
 
                 <HeaderUserMenu/>

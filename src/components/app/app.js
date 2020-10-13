@@ -12,22 +12,41 @@ import MainCarouselMobile from "../main-carousel-mobile";
 import BannerGroupOneMobile from "../banners/banner-group-one-mobile";
 import BannerGroupTwoMobile from "../banners/banner-group-two-mobile";
 import SearchMobile from "../search-mobile";
+import MobileNav from "../mobile-nav";
 
 
 
 export default class App extends Component{
 
     state = {
-       isSearchOpen: false
+        isShowSearch: false,
+        isShowNav: false,
     };
 
-    searchChange = () => {
+    isScroll(boolean){
+        const body = document.querySelector('body');
+
+        if(boolean) {
+            body.classList.add('no-scroll')
+
+        } else {
+            body.classList.remove('no-scroll')
+        }
+    }
+
+    isOpenSearch = () => {
         this.setState({
-            isSearchOpen: !this.state.isSearchOpen
+            isShowSearch: !this.state.isShowSearch
         })
     };
+
+    isOpenNav = () => {
+        this.setState({
+            isShowNav: !this.state.isShowNav
+        });
+    };
     render() {
-        const {isSearchOpen} = this.state;
+        const {isShowSearch, isShowNav} = this.state;
         const _bannerBaseApi = './image/banners/banner';
         const banner1 = [
             {src: `${_bannerBaseApi}-1.jpg`, cls: '_desktop', id: 'desktop' },
@@ -42,11 +61,16 @@ export default class App extends Component{
             {src: `${_bannerBaseApi}-2-small.jpg`, cls: '_small', id: 'small' },
             {src: `${_bannerBaseApi}-2-tiny.jpg`, cls: '_tiny', id: 'tiny' },
         ];
+
+        this.isScroll(this.state.isShowNav);
         return (
 
             <div className='app'>
 
-                <Header searchChange={this.searchChange}/>
+                <Header
+                    isOpenSearch={this.isOpenSearch}
+                    isOpenNav={this.isOpenNav}
+                />
                 <MainCarousel/>
                 <MainCarouselMobile/>
                 <Brands/>
@@ -61,8 +85,12 @@ export default class App extends Component{
                 <BannerGroupTwoMobile/>
                 <Footer/>
                 <SearchMobile
-                    searchChange={this.searchChange}
-                    isOpen={isSearchOpen}/>
+                    isOpenSearch={this.isOpenSearch}
+                    isOpen={isShowSearch}/>
+                <MobileNav
+                    isOpenNav={this.isOpenNav}
+                    isOpen={isShowNav}/>
+
             </div>
 
         )

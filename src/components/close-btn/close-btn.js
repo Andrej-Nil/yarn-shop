@@ -1,10 +1,10 @@
 import React from "react";
 import './close-btn.scss';
 
-const CloseBtn = ({searchChange}) => {
+const CloseBtn = ({close}) => {
     return (
         <i
-            onClick={searchChange}
+            onClick={close}
             className="close-btn"/>
     )
 };
