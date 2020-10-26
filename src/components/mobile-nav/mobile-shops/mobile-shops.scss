@@ -1,0 +1,36 @@
+.mobile-shops-ul{
+ background-color: #fcfcfc;
+ width: 100%;
+ transition: transform 0.3s ease;
+}
+
+
+.mobile-shops__li{
+ border-top: 1px solid #ccc;
+}
+
+.shops-li__link{
+ display: block;
+ padding: 10px 20px 15px;
+}
+
+.shops-li__title{
+ font-size: 14px;
+ font-weight: 800;
+ margin-bottom: 5px;
+}
+
+.shops-li__desc{
+ font-size: 14px;
+ line-height: 1.5;
+ margin-bottom: 3px;
+}
+
+.fake-link{
+ color: #1783e0;
+ font-size: 12px;
+ line-height: 1;
+ letter-spacing: 0.1rem;
+ padding-bottom: 2px;
+ border-bottom: 1px dotted #1783e0;
+}

@@ -1,0 +1,20 @@
+.mobile-catalog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 30px;
+  background-color: #fcfcfc;
+  transition: 0.2s ease;
+}
+
+.mobile-catalog._close{
+  transform: translate(100%, 0);
+}
+
+.mobile-catalog._open{
+  transform: translate(0%, 0);
+}
+

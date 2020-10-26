@@ -4,10 +4,10 @@ import ColCategoryItem from "../col-category-item";
 
 const CatalogList = ({catalogList}) => {
     function renderCategory() {
-        return catalogList.map( (categoryItem) => {
+        return catalogList.map( (categoryList) => {
             return(
-                <ColCategoryItem key={categoryItem.id}
-                    categoryItem={categoryItem}/>
+                <ColCategoryItem key={categoryList.id}
+                    categoryList={categoryList}/>
             )
         })
     }

@@ -8,7 +8,7 @@ import MenuMobileIcon from "../menu-mobile-icon";
 
 
 
-const HeaderTop = ({isOpenNav}) => {
+const HeaderTop = ({mobileNavOpen}) => {
     return (
         <div className='header-top ht'>
             <div className='container ht-inner'>
@@ -18,7 +18,7 @@ const HeaderTop = ({isOpenNav}) => {
                 </div>
                 <HeaderTopNav/>
                 <HeaderPhones/>
-                <MenuMobileIcon isOpenNav={isOpenNav}/>
+                <MenuMobileIcon mobileNavOpen={mobileNavOpen}/>
             </div>
         </div>
     )

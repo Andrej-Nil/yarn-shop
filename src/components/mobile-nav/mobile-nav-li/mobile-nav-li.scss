@@ -1,21 +1,19 @@
-.mobile-nav-ul{
-}
-
-.mobile-nav-li{
+.menu-mobile-li{
   position: relative;
   border-top: 1px solid #ccc;
-  font-size: 14px;
 }
 
-.mobile-nav__label{
+.menu-mobile__label{
+  position: relative;
   display: block;
   color: #444;
   cursor: pointer;
+  font-size: 14px;
   padding: 12px 20px;
 }
 
-._submenu-arrow{
-  &::before{
+._submenu-arrow {
+  &::after{
     content: '';
     position: absolute;
     top: 50%;
@@ -24,7 +22,7 @@
     display: block;
     width: 8px;
     height: 8px;
-    background-image: url('../../images/interface/grey-arrow.svg');
+    background-image: url('../../../images/interface/grey-arrow.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -49,17 +47,14 @@
   }
 }
 
-
-
-
 ._point {
   &::before {
-    background-image: url('../../images/icon/location.svg');
+    background-image: url('../../../images/icon/location.svg');
   }
 }
 
 ._catalog {
   &::before {
-    background-image: url('../../images/icon/mobile-canalog-icon.svg');
+    background-image: url('../../../images/icon/mobile-canalog-icon.svg');
   }
 }

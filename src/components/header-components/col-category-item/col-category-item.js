@@ -1,32 +1,17 @@
 import React from "react";
 import './col-category-item.scss'
 import Link from "../../link";
+import CatalogUl from "../catalog-ul";
 
-const ColCategoryItem = ({categoryItem}) => {
-    const {id, href, category, subcategory} = categoryItem;
+const ColCategoryItem = ({categoryList}) => {
+    const {id, href, category, categoryItem} = categoryList;
 
-    function renderSubcategoryItem() {
-        return subcategory.map( (subcategoryItem) => {
-            const {id, href, label} = subcategoryItem;
-            return (
-                <li key={id} className='col-subcategory-item _col-li-item'>
-                    <Link href={href}
-                          cls='col-subcategory__link _col-item-link'
-                          content={label} />
-                </li>
-            )
-        })
-    }
-
-    const subcategoryItem = renderSubcategoryItem();
     return (
         <li key={id} className='col-category-item _col-li-item'>
             <Link href={href}  cls={'col-category__link _col-item-link'}
                   content={category}/>
+            <CatalogUl categoryItem={categoryItem}/>
 
-            <ul className='col-subcategory'>
-                {subcategoryItem}
-            </ul>
         </li>
     )
 };

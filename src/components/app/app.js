@@ -12,23 +12,23 @@ import MainCarouselMobile from "../main-carousel-mobile";
 import BannerGroupOneMobile from "../banners/banner-group-one-mobile";
 import BannerGroupTwoMobile from "../banners/banner-group-two-mobile";
 import SearchMobile from "../search-mobile";
-import MobileNav from "../mobile-nav";
-
-
+import ServerPlug from "../../server-plug";
+import MobileNavWrap from "../mobile-nav/mobile-nav-wrap";
 
 export default class App extends Component{
-
+    serverPlug = new ServerPlug();
     state = {
         isShowSearch: false,
-        isShowNav: false,
+        isMobileNavOpen: false,
     };
 
     isScroll(boolean){
         const body = document.querySelector('body');
 
         if(boolean) {
-            body.classList.add('no-scroll')
-
+            setTimeout(()=>{
+                body.classList.add('no-scroll')
+            }, 200)
         } else {
             body.classList.remove('no-scroll')
         }
@@ -40,36 +40,21 @@ export default class App extends Component{
         })
     };
 
-    isOpenNav = () => {
+    mobileNavOpen = () => {
         this.setState({
-            isShowNav: !this.state.isShowNav
+            isMobileNavOpen: !this.state.isMobileNavOpen
         });
     };
     render() {
-        const {isShowSearch, isShowNav} = this.state;
-        const _bannerBaseApi = './image/banners/banner';
-        const banner1 = [
-            {src: `${_bannerBaseApi}-1.jpg`, cls: '_desktop', id: 'desktop' },
-            {src: `${_bannerBaseApi}-1-middle.jpg`, cls: '_middle', id: 'middle' },
-            {src: `${_bannerBaseApi}-1-small.jpg`, cls: '_small', id: 'small' },
-            {src: `${_bannerBaseApi}-1-tiny.jpg`, cls: '_tiny', id: 'tiny' },
-        ];
-
-        const banner2 = [
-            {src: `${_bannerBaseApi}-2.jpg`, cls: '_desktop', id: 'desktop' },
-            {src: `${_bannerBaseApi}-2-middle.jpg`, cls: '_middle', id: 'middle' },
-            {src: `${_bannerBaseApi}-2-small.jpg`, cls: '_small', id: 'small' },
-            {src: `${_bannerBaseApi}-2-tiny.jpg`, cls: '_tiny', id: 'tiny' },
-        ];
-
-        this.isScroll(this.state.isShowNav);
+        const {isShowSearch, isMobileNavOpen} = this.state;
+        const banner1 = this.serverPlug.banner1;
+        const banner2 = this.serverPlug.banner2;
+        this.isScroll(this.state.isMobileNavOpen);
         return (
-
             <div className='app'>
-
                 <Header
                     isOpenSearch={this.isOpenSearch}
-                    isOpenNav={this.isOpenNav}
+                    mobileNavOpen={this.mobileNavOpen}
                 />
                 <MainCarousel/>
                 <MainCarouselMobile/>
@@ -87,9 +72,11 @@ export default class App extends Component{
                 <SearchMobile
                     isOpenSearch={this.isOpenSearch}
                     isOpen={isShowSearch}/>
-                <MobileNav
-                    isOpenNav={this.isOpenNav}
-                    isOpen={isShowNav}/>
+
+                <MobileNavWrap
+                    isMobileNavOpen={isMobileNavOpen}
+                    mobileNavOpen={this.mobileNavOpen}
+                />
 
             </div>
 

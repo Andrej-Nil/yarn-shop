@@ -1,0 +1,21 @@
+.main-menu-mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 54px 0 30px;
+  background-color: #fcfcfc;
+  transition: 0.2s ease;
+}
+
+.main-menu-mobile._close{
+  transform: translate(100%, 0);
+}
+
+.main-menu-mobile._open{
+  transform: translate(0%, 0);
+}
+
+

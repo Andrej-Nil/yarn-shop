@@ -4,24 +4,34 @@
   align-items: flex-start;
   font-size: 15px;
   letter-spacing: 0.3px;
-  width: 260px;
-  margin-right: 60px;
+  width: 220px;
+  margin-right: 30px;
   &:last-child{
     margin-right: 0;
+  }
+  @media (min-width: 1024px) {
+    width: 260px;
+    margin-right: 60px;
   }
 }
 
 .header-shop__title{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
 }
 
 .header-shop__desc{
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.03rem;
   margin-bottom: 10px;
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 .header-shop__link{
