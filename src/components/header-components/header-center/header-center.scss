@@ -32,14 +32,6 @@
   }
 }
 
-.header-search{
-  display:none;
-  flex-grow: 1;
-  margin-right: 40px;
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
 
 .search-mobile-icon-wrap{
   display: block;
