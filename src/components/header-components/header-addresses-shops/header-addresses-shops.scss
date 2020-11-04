@@ -1,15 +1,22 @@
 .header-addresses-shops{
   position: absolute;
   display: none;
-  left: -191px;
+  flex-direction: column;
+  left: 0;
+  max-width: 1280px;
+  width: 100%;
   top: 100%;
   padding: 30px 15px;
   background-color: #f9f9f9;
   box-shadow: inset 0 4px 5px -3px rgba(0, 0, 0, 0.2);
-  //z-index: 100;
+  z-index: 100;
   @media (min-width: 1024px) {
     padding: 30px 40px;
-    left: -235px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  @media (min-width: 1280px) {
+    left: 15px;
   }
 }
 

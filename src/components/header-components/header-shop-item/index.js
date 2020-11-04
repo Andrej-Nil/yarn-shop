@@ -1,2 +1,2 @@
-import HeaderShopItem from "./header-shop-item";
-export default HeaderShopItem;
+import HeaderShopInfo from "./header-shop-info";
+export default HeaderShopInfo;

@@ -17,93 +17,93 @@ import Service from "../../server";
 import MobileNavWrap from "../mobile-nav/mobile-nav-wrap";
 
 export default class App extends Component{
-    serverPlug = new ServerPlug();
-    service = new Service();
-    state = {
-        banner1: {url: null, images:[]},
-        banner2: {url: null, images:[]},
-        isShowSearch: false,
-        isMobileNavOpen: false,
-        title: null
-    };
-    componentDidMount() {
-        this.service.getBanner(1)
-            .then( banner => {
-                this.setState({
-                    banner1: banner
-                })
-            }).catch((e) => console.log(e));
+	serverPlug = new ServerPlug();
+	service = new Service();
+	state = {
+		banner1: {url: null, images:[]},
+		banner2: {url: null, images:[]},
+		isShowSearch: false,
+		isMobileNavOpen: false,
+		title: null
+	};
+	componentDidMount() {
+		this.service.getBanner(1)
+			.then( banner => {
+				this.setState({
+					banner1: banner
+				})
+			}).catch((e) => console.log(e));
 
-        this.service.getBanner(2)
-            .then( banner => {
-                this.setState({
-                    banner2: banner
-                })
-            }).catch((e) => console.log(e));
-    };
+		this.service.getBanner(2)
+			.then( banner => {
+				this.setState({
+					banner2: banner
+				})
+			}).catch((e) => console.log(e));
+	};
 
-    isScroll(boolean){
-        const body = document.querySelector('body');
+	isScroll(boolean){
+		const body = document.querySelector('body');
 
-        if(boolean) {
-            setTimeout(()=>{
-                body.classList.add('no-scroll')
-            }, 200)
-        } else {
-            body.classList.remove('no-scroll')
-        }
-    }
+		if(boolean) {
+			setTimeout(()=>{
+				body.classList.add('no-scroll')
+			}, 200)
+		} else {
+			body.classList.remove('no-scroll')
+		}
+	}
 
-    isOpenSearch = () => {
-        this.setState({
-            isShowSearch: !this.state.isShowSearch
-        })
-    };
+	isOpenSearch = () => {
+		this.setState({
+			isShowSearch: !this.state.isShowSearch
+		})
+	};
 
-    mobileNavOpen = () => {
+	mobileNavOpen = () => {
 
-        this.setState({
-            isMobileNavOpen: !this.state.isMobileNavOpen
-        });
-    };
+		this.setState({
+			isMobileNavOpen: !this.state.isMobileNavOpen
+		});
+	};
 
 
-    render() {
-        const {isShowSearch, isMobileNavOpen} = this.state;
-        const banner1 = this.state.banner1;
-        const banner2 = this.state.banner2;
-        this.isScroll(this.state.isMobileNavOpen);
-        return (
-            <div className='app'>
+	render() {
+		const {isShowSearch, isMobileNavOpen} = this.state;
+		const banner1 = this.state.banner1;
+		const banner2 = this.state.banner2;
+		this.isScroll(this.state.isMobileNavOpen);
+		return (
+			<div className='app'>
 
-                <Header
-                    isOpenSearch={this.isOpenSearch}
-                    mobileNavOpen={this.mobileNavOpen}
-                />
-                <MainCarousel/>
-                <MainCarouselMobile/>
-                <Brands/>
-                <ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
-                <Banner banner={banner1}/>
-                <ProductRow title={'РАСПРОДАЖА'}/>
-                <Banner banner={banner2}/>
-                <BannerGroupOne/>
-                <BannerGroupOneMobile/>
-                <ProductRow title={'НОВИНКИ'}/>
-                <BannerGroupTwo/>
-                <BannerGroupTwoMobile/>
-                <Footer/>
-                <SearchMobile
-                    isOpenSearch={this.isOpenSearch}
-                    isOpen={isShowSearch}/>
+				<Header
+					isOpenSearch={this.isOpenSearch}
+					mobileNavOpen={this.mobileNavOpen}
+				/>
+				<MainCarousel/>
+				<MainCarouselMobile/>
+				<Brands/>
+				<ProductRow title={'ЛИДЕРЫ ПРОДАЖ'}/>
+				<Banner banner={banner1}/>
+				<ProductRow title={'РАСПРОДАЖА'}/>
+				<Banner banner={banner2}/>
+				<BannerGroupOne/>
+				<BannerGroupOneMobile/>
+				<ProductRow title={'НОВИНКИ'}/>
+				<BannerGroupTwo/>
+				<BannerGroupTwoMobile/>
+				<Footer/>
+				<SearchMobile
+					isOpenSearch={this.isOpenSearch}
+					isOpen={isShowSearch}/>
 
-                <MobileNavWrap
-                    isMobileNavOpen={isMobileNavOpen}
-                    mobileNavOpen={this.mobileNavOpen}
-                />
+				<MobileNavWrap
+					isMobileNavOpen={isMobileNavOpen}
+					mobileNavOpen={this.mobileNavOpen}
+				/>
 
-            </div>
+			</div>
 
-        )
-    }
+		)
+	}
 }

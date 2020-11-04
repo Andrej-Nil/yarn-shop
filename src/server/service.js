@@ -20,6 +20,10 @@ class Service {
         return await this.getResource(`/banner${numBanner}/`);
     };
 
+    getInfoOfShops = async () => {
+        return await this.getResource(`/infoOfShops/`);
+    };
+
 }
 
 export default Service;

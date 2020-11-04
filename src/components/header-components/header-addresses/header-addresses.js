@@ -6,11 +6,12 @@ import HeaderAddressesShops from "../header-addresses-shops";
 const HeaderAddresses = () => {
     return (
         <div className="header-addresses">
-            <Link
-            cls='header-addresses__link'
-            href={`#!`}
-            content={`Мы находимся`}
-        />
+            <div className="addresses-link-wrap">
+                <Link
+                    cls='addresses__link'
+                    href={`#!`}
+                    content={`Мы находимся`}/>
+            </div>
             <HeaderAddressesShops/>
         </div>
     )

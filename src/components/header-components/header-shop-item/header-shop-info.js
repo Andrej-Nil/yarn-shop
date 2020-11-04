@@ -1,9 +1,9 @@
 import React from "react";
-import './header-shop-item.scss'
+import './header-shop-info.scss'
 
-const HeaderShopItem = ({info}) => {
+const HeaderShopInfo = ({info}) => {
+
     const {title, item} = info;
-
     function renderInfo() {
         return item.map( ({value, id}) => {
             return (
@@ -23,4 +23,4 @@ const HeaderShopItem = ({info}) => {
     )
 };
 
-export default HeaderShopItem;
+export default HeaderShopInfo;

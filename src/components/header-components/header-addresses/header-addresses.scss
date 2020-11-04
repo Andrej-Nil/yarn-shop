@@ -1,10 +1,27 @@
 .header-addresses{
-  position: relative;
   display: none;
   align-items: center;
-  margin-left: 15px;
-  padding-left: 25px;
+  margin-left: 20px;
   z-index: 100;
+
+  &:hover{
+    height: 100%;
+  }
+
+  &:hover .header-addresses-shops{
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+
+}
+
+.addresses-link-wrap{
+  position: relative;
+  padding-left: 25px;
   &::before{
     content: '';
     position: absolute;
@@ -19,32 +36,23 @@
     background-size: 100%;
     background-position: 0 center;
   }
-
-  &:hover{
-    height: 100%;
-  }
-
-  &:hover .header-addresses-shops{
-    display: flex;
-  }
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
-
   @media (min-width: 1230px) {
-    padding-left: 30px;
-    &::before{
+    padding-left: 35px;
+    &::before {
       width: 25px;
       height: 25px;
     }
   }
 }
 
-.header-addresses__link{
+.addresses__link{
   font-size: 14px;
   border-bottom: 1px dotted #000;
   @media (min-width: 1230px) {
     font-size: 17px;
+    &::before {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
