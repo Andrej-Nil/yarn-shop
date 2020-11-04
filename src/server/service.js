@@ -24,6 +24,10 @@ class Service {
         return await this.getResource(`/infoOfShops/`);
     };
 
+    getMainCarouselSlides = async () => {
+        return await this.getResource(`/mainCarousel/`);
+    };
+
 }
 
 export default Service;

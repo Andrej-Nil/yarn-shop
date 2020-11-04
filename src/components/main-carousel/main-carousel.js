@@ -4,6 +4,7 @@ import Link from "../link";
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Service from "../../server";
 
 function SampleNextArrow(props) {
     const {onClick } = props;
@@ -21,28 +22,41 @@ function SamplePrevArrow(props) {
 
 
 export default class MainCarousel extends Component{
+    service = new Service();
     state={
-        slides: [
-            {
-                src: '/image/main-slides/anti-covid.jpg', href: '#!', id: 'slide1'
-            },
-            {
-                src: '/image/main-slides/lana-gatto.jpg', href: '#!', id: 'slide2'
-            },
-            {
-                src: '/image/main-slides/sale-nako.jpg', href: '#!', id: 'slide3'
-            },
-
-        ]
+        slides: [],
+        loading: true,
+        error: false
     };
+
+    onSlides = (slides) => {
+        this.setState({
+            slides,
+            loading: false
+        })
+    };
+
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            error: true,
+            loading: false
+        })
+    };
+
+    componentDidMount() {
+        this.service.getMainCarouselSlides()
+            .then(this.onSlides)
+            .catch(this.onError)
+    }
 
     render() {
         const {slides} = this.state;
 
         function renderSlides(){
-            return slides.map(({src, href,  id}) => {
+            return slides.map(({image, href,  id}) => {
 
-                const img = <img src={src} alt=''/>;
+                const img = <img src={image} alt=''/>;
 
                 return (
                     <Link key={id} href={href}

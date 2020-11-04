@@ -3,6 +3,7 @@ import './header-addresses-shops.scss'
 import HeaderShop from "../header-shop";
 import Service from "../../../server";
 import Spinner from "../../spinner";
+import ErrorMessage from "../../error-message/error-message";
 
 export default class HeaderAddressesShops extends Component{
     service = new Service();
@@ -51,7 +52,7 @@ export default class HeaderAddressesShops extends Component{
         const hasData = !(loading || error);
         const spinner = loading ? <Spinner/> : null;
         const shops = hasData ? this.renderShops() : null;
-        const errorMessage = error ? 'test' : null;
+        const errorMessage = error ? <ErrorMessage/> : null;
         return (
             <div className='header-addresses-shops'>
                 {errorMessage}
