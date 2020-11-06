@@ -6,7 +6,6 @@ export default class MobileNavUl extends Component{
 
     render() {
         const {submenu} = this.props;
-        // console.log(submenu)
 
         function renderMenu() {
             return submenu.map( (item) => {

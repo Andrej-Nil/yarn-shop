@@ -1,4 +1,5 @@
 .col-category-item{
+
   &:hover .col-category__link{
     color: #000;
     border-bottom: 1px solid rgba(143, 143, 143, 1);
@@ -19,6 +20,7 @@
 ._col-item-link{
   display: block;
   padding: 10px 0;
+
   color: #555;
   border-bottom: 1px solid rgba(51, 51, 51, 0);
 }

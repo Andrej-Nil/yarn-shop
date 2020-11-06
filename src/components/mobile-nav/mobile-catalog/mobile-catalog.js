@@ -9,12 +9,12 @@ export default class MobileCatalog extends Component{
 
     render() {
         const {mobileNavOpen} = this.props;
-        const {isSubmenuOpen, submenuClose, categoryList, categoryOpen} = this.props;
+        const {isSubmenuOpen, submenuClose, catalog, categoryOpen} = this.props;
         const cls = isSubmenuOpen === 'catalog'
             ? '_open' : '_close';
-
         function categoryItem() {
-            return categoryList.map( ( item ) => {
+            return catalog.map( ( item ) => {
+
                 const {category, categoryItem, id} = item;
                 return <MobileNavLi
                     key={id}

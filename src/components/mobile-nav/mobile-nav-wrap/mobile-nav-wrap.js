@@ -4,23 +4,45 @@ import MainMenuMobile from "../main-menu-mobile";
 import ServerPlug from "../../../server-plug";
 import MobileSubmenu from "../mobile-submenu";
 import MobileCatalog from "../mobile-catalog";
+import Service from "../../../server";
 
 export default class MobileNavWrap extends Component{
     serverPlug = new ServerPlug();
+    service = new Service();
     state = {
         isSubmenuOpen: null,
-        IsCatalogOpen: null
+        IsCatalogOpen: null,
+        catalog: [],
+        catalogLoading: true,
+        catalogError: false
     };
 
     submenuList = this.serverPlug.mobileMenuList;
-    categoryList = this.serverPlug.catalogList;
 
+    getCatalog() {
+        this.service.getCatalog()
+            .then(this.onCatalog)
+            .catch(this.onError)
+    }
 
-    componentDidUpdate(prevProps) {
-        if(this.props.isMobileNavOpen !== prevProps.isMobileNavOpen){
-            this.submenuClose();
-            this.categoryClose();
-        }
+    onCatalog = (catalog) => {
+
+        this.setState({
+            catalog,
+            catalogLoading: false
+        })
+    };
+
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            catalogError: true,
+            catalogLoading: false
+        })
+    };
+
+    componentDidMount() {
+        this.getCatalog();
     }
 
     submenuOpen = (id) => {
@@ -49,6 +71,16 @@ export default class MobileNavWrap extends Component{
     };
 
 
+    componentDidUpdate(prevProps) {
+        if(this.props.isMobileNavOpen !== prevProps.isMobileNavOpen){
+            this.submenuClose();
+            this.categoryClose();
+        }
+    }
+
+
+
+
     renderSubmenu = () => {
         const {isSubmenuOpen} = this.state;
         const {mobileNavOpen} = this.props;
@@ -71,9 +103,9 @@ export default class MobileNavWrap extends Component{
     };
 
     renderSubcategory = () => {
-        const {IsCatalogOpen} = this.state;
+        const {IsCatalogOpen, catalog} = this.state;
         const {mobileNavOpen} = this.props;
-        return this.categoryList.map( (item) => {
+        return catalog.map( (item) => {
             const {category, categoryItem, id} = item;
             if(!categoryItem){
                 return null
@@ -93,7 +125,7 @@ export default class MobileNavWrap extends Component{
 
     render() {
         const {isMobileNavOpen, mobileNavOpen} = this.props;
-        const {isSubmenuOpen} = this.state;
+        const {isSubmenuOpen, catalog} = this.state;
         const submenu = this.renderSubmenu();
         const subcategory = this.renderSubcategory();
 
@@ -112,7 +144,7 @@ export default class MobileNavWrap extends Component{
                     submenuClose={this.submenuClose}
                     isMobileNavOpen={isMobileNavOpen}
                     mobileNavOpen={mobileNavOpen}
-                    categoryList={this.categoryList}
+                    catalog={catalog}
                     categoryOpen={this.categoryOpen}
                 />
 

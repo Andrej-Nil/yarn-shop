@@ -1,52 +1,49 @@
 import React, {Component}  from 'react';
 import './brands.scss'
 import Link from "../link";
+import Service from "../../server";
+
 
 export default class Brands extends Component{
+    service = new Service();
     state= {
-        brands: [
-            {
-                src: '/image/brands/alize-logo.png',
-                href: '#!', id: 'alize'
-            },
-            {
-                src: '/image/brands/clover-logo.png',
-                href: '#!', id: 'clover'
-            },
-            {
-                src: '/image/brands/etrofil-logo.png',
-                href: '#!', id: 'etrofil'
-            },
-            {
-                src: '/image/brands/gazzal-logo.png',
-                href: '#!', id: 'gazzal'
-            },
-            {
-                src: '/image/brands/knitpro-logo.png',
-                href: '#!', id: 'knitpro'
-            },
-            {
-                src: '/image/brands/pehorka-logo.png',
-                href: '#!', id: 'pehorka'
-            },
-            {
-                src: '/image/brands/seam-logo.png',
-                href: '#!', id: 'seam'
-            },
-            {
-                src: '/image/brands/yarnart-logo.png',
-                href: '#!', id: 'yarnart'
-            },
-        ]
+        brands: [],
+        loading: true,
+        error: false,
     };
+
+    onBrands = (brands) => {
+        this.setState({
+            brands,
+            loading: false
+        })
+    };
+
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            loading: false,
+            error: true,
+        })
+    };
+
+    getBrands(){
+        this.service.getBrands()
+            .then(this.onBrands)
+            .catch(this.onError)
+    };
+
+    componentDidMount() {
+        this.getBrands()
+    }
 
     renderBrands() {
         const { brands } = this.state;
         return brands.map( (brand) => {
-            const {src, href, id} = brand;
-            const brandIcon = <img className='brands__item' src={src} alt={id}/>;
+            const {image, url, id} = brand;
+            const brandIcon = <img className='brands__item' src={image} alt={id}/>;
             return (
-                <Link key={id} href={href} cls={'brands-link'} content={brandIcon}/>
+                <Link key={id} href={url} cls={'brands-link'} content={brandIcon}/>
             )
         })
     }

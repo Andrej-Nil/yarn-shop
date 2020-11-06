@@ -2,17 +2,43 @@ import React, {Component} from "react";
 import './catalog.scss';
 import CatalogList from "../catalog-list";
 import Link from "../../link";
-import ServerPlug from "../../../server-plug";
+import Service from "../../../server";
 
 export default  class Catalog extends Component{
-    serverPlug = new ServerPlug();
+    service = new Service();
     state = {
-        catalogList: this.serverPlug.catalogList
+        catalog: [],
+        loading: true,
+        error: false,
     };
 
-    render() {
+    getCatalog() {
+        this.service.getCatalog()
+            .then(this.onCatalog)
+            .catch(this.onError)
+    }
 
-        const { catalogList } = this.state;
+    onCatalog = (catalog) => {
+        this.setState({
+            catalog,
+            loading: false
+        })
+    };
+
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            error: true,
+            loading: false
+        })
+    };
+
+    componentDidMount() {
+        this.getCatalog()
+    }
+
+    render() {
+        const { catalog } = this.state;
         const catalogBtn = (
             <div className='catalog-btn'>
                 <span>
@@ -26,7 +52,7 @@ export default  class Catalog extends Component{
                 <Link href={'#!'}
                       cls={"catalog__link"}
                       content={catalogBtn}/>
-                <CatalogList catalogList={catalogList}/>
+                <CatalogList catalog={catalog}/>
             </div>
         )
     }

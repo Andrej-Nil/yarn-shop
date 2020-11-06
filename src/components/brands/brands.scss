@@ -7,7 +7,6 @@
   margin-bottom: 10px;
 
   @media (min-width: 768px) {
-    //flex-wrap: nowrap;
     padding: 0 10px;
     margin-bottom: 20px;
   }
@@ -19,16 +18,24 @@
   }
 }
 
+
+
 .brands-link{
   position: relative;
   display: inline-flex;
   width: 21%;
+
   height: 100px;
+  margin-bottom: 10px;
   align-items: center;
+
+  @media (min-width: 450px) {
+    height: 130px
+  }
 
   @media (min-width: 576px) {
     padding: 0 10px;
-    //margin-bottom: 10px;
+    height: 130px
   }
 
   @media (min-width: 768px) {

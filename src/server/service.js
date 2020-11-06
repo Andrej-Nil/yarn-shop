@@ -28,6 +28,28 @@ class Service {
         return await this.getResource(`/mainCarousel/`);
     };
 
+    getBrands = async () => {
+        const brands =  await this.getResource(`/brands/`);
+        this.shuffle(brands);
+        return brands.slice(8)
+    };
+
+    getCatalog = async () => {
+        return  await this.getResource(`/catalog/`);
+    };
+
+    shuffle = (arr) => {
+        for (let i = arr.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr
+    }
+
+
+
+
+
 }
 
 export default Service;

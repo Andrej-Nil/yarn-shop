@@ -2,9 +2,9 @@ import React from "react";
 import './catalog-list.scss';
 import ColCategoryItem from "../col-category-item";
 
-const CatalogList = ({catalogList}) => {
+const CatalogList = ({catalog}) => {
     function renderCategory() {
-        return catalogList.map( (categoryList) => {
+        return catalog.map( (categoryList) => {
             return(
                 <ColCategoryItem key={categoryList.id}
                     categoryList={categoryList}/>

@@ -2,7 +2,7 @@ import React from "react";
 import './mobile-nav-li.scss'
 
 const MobileNavLi = ({item, label, submenu, submenuOpen}) => {
-    const {href, cls, id} = item;
+    const {url, cls, id} = item;
     if(submenu){
         return (
             <li className='menu-mobile-li'>
@@ -19,7 +19,7 @@ const MobileNavLi = ({item, label, submenu, submenuOpen}) => {
     return (
         <li className='menu-mobile-li'>
             <a className='menu-mobile__link'
-               href={href}>
+               href={url}>
                         <span className='menu-mobile__label'>
                             {label}
                         </span>

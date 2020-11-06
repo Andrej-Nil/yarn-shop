@@ -26,7 +26,9 @@ export default class App extends Component{
 		isMobileNavOpen: false,
 		title: null
 	};
+
 	componentDidMount() {
+
 		this.service.getBanner(1)
 			.then( banner => {
 				this.setState({
