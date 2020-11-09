@@ -6,11 +6,11 @@ const FooterNavCol = ({item}) => {
     const {title, links} = item;
 
     function renderLi() {
-        return links.map( ({href, label, id}) => {
+        return links.map( ({url, label, id}) => {
             return (
                 <li  key={id} className="footer-nav-li">
                     <Link cls='footer-nav-li__link'
-                          href={href} content={label} />
+                          href={url} content={label} />
                 </li>
             )
         })

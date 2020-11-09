@@ -38,6 +38,14 @@ class Service {
         return  await this.getResource(`/catalog/`);
     };
 
+    getMobileNav = async () => {
+        return  await this.getResource(`/mobileNav/`);
+    };
+
+    getFooterNav = async () => {
+        return  await this.getResource(`/footerNav/`);
+    };
+
     shuffle = (arr) => {
         for (let i = arr.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
