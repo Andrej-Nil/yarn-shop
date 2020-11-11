@@ -1,11 +1,7 @@
-
 .price-type-definition{
   position: absolute;
   right: 0;
   top: 0;
-  &:hover .definition-content{
-    display: block;
-  }
 }
 
 .definition__icon{
@@ -37,16 +33,32 @@
   padding-bottom: 10px;
 }
 
+.definition-content._open{
+  display: block;
+}
+
 .definition-inner{
   position: relative;
   background-color: #eee;
-  padding: 10px 15px;
+  padding: 25px 15px 10px 15px;
   border-radius: 5px;
-  width: 250px;
+  width: 190px;
   font-size: 12px;
   line-height: 1.4;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   z-index: 50;
+}
+
+.definition__close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url('../../../images/interface/close-button.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: right top;
 }
 
 .definition__desc{
