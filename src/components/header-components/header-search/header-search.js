@@ -31,19 +31,18 @@ export default class HeaderSearch extends Component{
     }
 
     getPlaceholder(){
-        const id = Math.floor(Math.random() * 10);
         this.service
-            .getSearchPlaceholder(id)
+            .getSearchPlaceholder()
             .then( this.onPlaceholderLoaded)
             .catch(this.onError)
     }
     render() {
         const {placeholder, loading, error} = this.state;
-        const pholder = !error ? placeholder : "alize";
+        const holder = !error ? placeholder : "alize";
         return (
             <div className='header-search'>
                 <FormInputBtn label={'Найти'}
-                    placeholder={pholder}
+                    placeholder={holder}
                     loading={loading}/>
 
             </div>

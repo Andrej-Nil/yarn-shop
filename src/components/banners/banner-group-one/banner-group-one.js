@@ -1,50 +1,82 @@
-import React from "react";
+import React, {Component} from "react";
 import './banner-group-one.scss'
+import Service from "../../../server";
 import BannerGroupImg from "../banner-group-img";
 
-const BannerGroupOne = () => {
-    const _baseSrc = 'image/banners/b-group-1/b-group-1-';
-    const img1 = {href: '#!', src: _baseSrc + '1.jpg', alt: 'лето',
-        desc: 'Летная подборка.', id: 'summer'};
-    const img2 = {href: '#!', src: _baseSrc + '2.jpg', alt: 'осень',
-        desc: 'Осенняя подборка.', id: 'fall'};
-    const img3 = {href: '#!', src: _baseSrc + '3.jpg', alt: 'весна',
-        desc: 'Весенняя подборка.', id:'spring'};
-    const img4 = {href: '#!', src: _baseSrc + '4.jpg', alt: 'зима',
-        desc: 'Зимняя подборка.', id:'winter'};
+export default class BannerGroupOne extends Component{
+    service = new Service();
+    state = {
+        banner1: {},
+        banner2: {},
+        banner3: {},
+        banner4: {},
+        loading: true,
+        error: false
+    };
 
+    onBannerGroup = (bannerGroup) => {
+        this.setState({
+            banner1: bannerGroup[0],
+            banner2: bannerGroup[1],
+            banner3: bannerGroup[2],
+            banner4: bannerGroup[3],
+            loading: false
+        })
+    };
 
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            error: true,
+            loading: false
+        })
+    };
 
-    return (
-        <div className='banner-group-one mb b-group-1 container'>
-            <div className="b-group-1-inner">
-                <div className='b-group-1-img1'>
-                    <BannerGroupImg img={img1}/>
-                </div>
-                <div className='b-group-1-right '>
+    getBannerGroup() {
+        this.service.getBanner('-group-1')
+            .then(this.onBannerGroup)
+            .catch(this.onError)
+    }
 
-                    <div className='b-group-1-img2'>
-                        <BannerGroupImg img={img2}/>
+    componentDidMount() {
+        this.getBannerGroup()
+    }
+
+    render() {
+        const {banner1, banner2, banner3, banner4} = this.state;
+
+        return (
+            <div className='banner-group-one mb b-group-1 container'>
+                <div className="b-group-1-inner">
+                    <div className='b-group-1-img1'>
+                        <BannerGroupImg banner={banner1}/>
                     </div>
-                    <div className='b-group-1-bottom'>
-                        <div className='b-group-1-b-left'>
+                    <div className='b-group-1-right '>
 
-                            <p className='b-group-1__desc'>
-                                Для каждого времяни года найдеться подходящая пряжа!
-                            </p>
-                            <div className='b-group-1-b-img3'>
-                                <BannerGroupImg img={img3}/>
-                            </div>
-
+                        <div className='b-group-1-img2'>
+                            <BannerGroupImg banner={banner2}/>
                         </div>
-                        <div className='b-group-1-img4'>
-                            <BannerGroupImg img={img4}/>
+                        <div className='b-group-1-bottom'>
+                            <div className='b-group-1-b-left'>
+
+                                <p className='b-group-1__desc'>
+                                    Для каждого времяни года найдеться подходящая пряжа!
+                                </p>
+                                <div className='b-group-1-b-img3'>
+                                    <BannerGroupImg banner={banner3}/>
+                                </div>
+
+                            </div>
+                            <div className='b-group-1-img4'>
+                                <BannerGroupImg banner={banner4}/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
+
 };
 
-export default BannerGroupOne;
+

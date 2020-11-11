@@ -1,14 +1,13 @@
 import React from "react";
 import './banner-group-img.scss'
 
-const BannerGroupImg = ({img}) => {
-    const {href, src, alt, desc} = img;
+const BannerGroupImg = ({banner}) => {
+    const {url, img, desc} = banner;
     return (
-        <a href={href} className="banner-group-link">
+        <a href={url} className="banner-group-link">
 
-            <img className='banner-group__img'  src={src} alt={alt}/>
+            <img className='banner-group__img'  src={img} alt={desc}/>
             <p className='banner-group__desc' >{desc}</p>
-
         </a>
     )
 };

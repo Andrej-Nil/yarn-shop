@@ -4,22 +4,34 @@ import Link from "../link";
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Service from "../../server";
 
 export default class MainCarouselMobile extends Component{
+    service = new Service();
     state={
-        slides: [
-            {
-                src: '/image/main-slides-mobile/anti-covid-m.jpg', href: '#!', id: 'slide1'
-            },
-            {
-                src: '/image/main-slides-mobile/lana-gatto-m.jpg', href: '#!', id: 'slide2'
-            },
-            {
-                src: '/image/main-slides-mobile/sale-nako-m.jpg', href: '#!', id: 'slide3'
-            },
-
-        ]
+        slides: []
     };
+
+    onSlides = (slides) => {
+        this.setState({
+            slides,
+            loading: false
+        })
+    };
+
+    onError = (err) => {
+        console.log(err);
+        this.setState({
+            error: true,
+            loading: false
+        })
+    };
+
+    componentDidMount() {
+        this.service.getMainCarouselMobileSlides()
+            .then(this.onSlides)
+            .catch(this.onError)
+    }
     render() {
         const {slides} = this.state;
 
@@ -40,14 +52,14 @@ export default class MainCarouselMobile extends Component{
         };
 
         function renderSlides(){
-            return slides.map(({src, href,  id}) => {
+            return slides.map(({img, url,  id}) => {
 
-                const img = <img src={src} alt=''/>;
+                const image = <img src={img} alt=''/>;
 
                 return (
-                    <Link key={id} href={href}
+                    <Link key={id} href={url}
                           cls=''
-                          content={img}/>
+                          content={image}/>
                 )
             })
         }

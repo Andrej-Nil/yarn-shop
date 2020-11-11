@@ -11,14 +11,16 @@ class Service {
          return res.data
     };
 
-    getSearchPlaceholder = async (id) => {
+    getSearchPlaceholder = async () => {
+        const id = Math.floor(Math.random() * 10);
         return await this.getResource(`/searchPlaceholder/${id}`);
-    };
 
+    };
 
     getBanner = async (numBanner) => {
         return await this.getResource(`/banner${numBanner}/`);
     };
+
 
     getInfoOfShops = async () => {
         return await this.getResource(`/infoOfShops/`);
@@ -26,6 +28,10 @@ class Service {
 
     getMainCarouselSlides = async () => {
         return await this.getResource(`/mainCarousel/`);
+    };
+
+    getMainCarouselMobileSlides = async () => {
+        return await this.getResource(`/mainCarouselMobile/`);
     };
 
     getBrands = async () => {
